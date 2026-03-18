@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanban — A Tática</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise-overlay"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <span class="brand-mark">▲</span>
+        <h1 class="project-name" id="project-name">A Tática</h1>
+      </div>
+      <div class="header-meta">
+        <span class="meta-label">Atualizado em</span>
+        <span class="meta-value" id="last-updated">—</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="board-wrapper">
+    <div class="kanban-grid" id="kanban-grid" role="list" aria-label="Quadro de demandas">
+      <!-- Colunas renderizadas via app.js -->
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
