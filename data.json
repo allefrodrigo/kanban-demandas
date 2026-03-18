@@ -1,6 +1,6 @@
 {
   "project": "A Tática — Kanban",
-  "lastUpdated": "2026-03-18T11:30",
+  "lastUpdated": "2026-03-18T13:21",
   "columns": ["backlog", "analise", "andamento", "revisao", "concluido"],
   "demands": [
     {
