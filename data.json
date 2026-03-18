@@ -1,13 +1,13 @@
 {
-  "project": "A Tática — Plataforma de Alunos",
-  "lastUpdated": "2026-03-18",
+  "project": "A Tática — Kanban",
+  "lastUpdated": "2026-03-18T11:30",
   "columns": ["backlog", "analise", "andamento", "revisao", "concluido"],
   "demands": [
     {
       "id": "001",
       "title": "Prova Aleatória",
       "priority": "alta",
-      "status": "backlog",
+      "status": "analise",
       "description": "A regra atual não permite escolher livremente questões apenas do banco interno ou apenas do banco externo. Além disso, como os alunos realizarão simulados ENEM dentro da plataforma, permitir acesso irrestrito ao banco interno pode fazer com que visualizem antecipadamente questões que farão parte dos simulados. A funcionalidade deve permitir montar a prova aleatória com maior liberdade de escolha entre os bancos.",
       "subtasks": [
         { "id": "001.1", "text": "Permitir escolha de somente questões do banco interno (com regra de proteção às questões dos simulados ENEM)", "done": false },
@@ -19,7 +19,7 @@
       "id": "002",
       "title": "Simulados",
       "priority": "alta",
-      "status": "backlog",
+      "status": "analise",
       "description": "Alunos relatam dificuldade para visualizar o simulado semanal na tela, só conseguindo encontrar o botão 'clique aqui para iniciar' ao diminuir o zoom manualmente. O aluno também consegue ver informações de disponibilidade para outros planos e instituições, poluindo a interface e aumentando o card desnecessariamente. A ordenação atual não favorece a sequência pedagógica desejada, fazendo com que alguns alunos realizem simulados mais recentes antes dos anteriores.",
       "subtasks": [
         { "id": "002.1", "text": "Corrigir layout e responsividade do card para que o botão de início fique visível sem alterar zoom", "done": false },
