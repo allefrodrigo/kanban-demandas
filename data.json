@@ -8,10 +8,11 @@
       "title": "Prova Aleatória",
       "priority": "alta",
       "status": "backlog",
-      "description": "Implementar seleção de banco de questões para geração de provas aleatórias, permitindo escolha entre banco interno, externo ou misto. Incluir regra de proteção para que simulados ativos não sejam impactados.",
+      "description": "A regra atual não permite escolher livremente questões apenas do banco interno ou apenas do banco externo. Além disso, como os alunos realizarão simulados ENEM dentro da plataforma, permitir acesso irrestrito ao banco interno pode fazer com que visualizem antecipadamente questões que farão parte dos simulados. A funcionalidade deve permitir montar a prova aleatória com maior liberdade de escolha entre os bancos.",
       "subtasks": [
-        { "id": "001.1", "text": "Seleção de banco interno / externo / misto", "done": false },
-        { "id": "001.2", "text": "Regra de proteção para simulados ativos", "done": false }
+        { "id": "001.1", "text": "Permitir escolha de somente questões do banco interno (com regra de proteção às questões dos simulados ENEM)", "done": false },
+        { "id": "001.2", "text": "Permitir escolha de somente questões do banco externo", "done": false },
+        { "id": "001.3", "text": "Permitir combinação entre os dois bancos", "done": false }
       ]
     },
     {
@@ -19,11 +20,12 @@
       "title": "Simulados",
       "priority": "alta",
       "status": "backlog",
-      "description": "Três melhorias na seção de simulados: aprimorar layout e responsividade para mobile, adicionar filtro por plano do aluno e definir ordenação padrão consistente.",
+      "description": "Alunos relatam dificuldade para visualizar o simulado semanal na tela, só conseguindo encontrar o botão 'clique aqui para iniciar' ao diminuir o zoom manualmente. O aluno também consegue ver informações de disponibilidade para outros planos e instituições, poluindo a interface e aumentando o card desnecessariamente. A ordenação atual não favorece a sequência pedagógica desejada, fazendo com que alguns alunos realizem simulados mais recentes antes dos anteriores.",
       "subtasks": [
-        { "id": "002.1", "text": "Layout e responsividade", "done": false },
-        { "id": "002.2", "text": "Filtro por plano do aluno", "done": false },
-        { "id": "002.3", "text": "Ordenação padrão dos simulados", "done": false }
+        { "id": "002.1", "text": "Corrigir layout e responsividade do card para que o botão de início fique visível sem alterar zoom", "done": false },
+        { "id": "002.2", "text": "Exibir apenas simulados compatíveis com o plano do aluno, sem listar instituições ou planos no card", "done": false },
+        { "id": "002.3", "text": "Ordenação padrão: não realizados primeiro, por semana crescente, ordem pedagógica do ADM dentro da semana (ex: Semana 01 Mat → Ling → Hum → Nat, depois Semana 02)", "done": false },
+        { "id": "002.4", "text": "Manter botão 'ordenar por' disponível para o aluno reorganizar manualmente", "done": false }
       ]
     },
     {
@@ -31,11 +33,11 @@
       "title": "Meus Estudos › Cronograma",
       "priority": "media",
       "status": "backlog",
-      "description": "Melhorias no módulo de cronograma de estudos: corrigir visualização dos dados persistidos, garantir salvamento correto das configurações e tratar conflitos de sobreposição de horários.",
+      "description": "Alunos relatam falhas no módulo de cronograma: dificuldade para visualizar corretamente a semana, agenda ou dia; falhas ao salvar tarefas; e sobreposição de tarefas na agenda mesmo quando os horários cadastrados são diferentes.",
       "subtasks": [
-        { "id": "003.1", "text": "Visualização dos dados do cronograma", "done": false },
-        { "id": "003.2", "text": "Salvamento das configurações", "done": false },
-        { "id": "003.3", "text": "Tratamento de sobreposição de horários", "done": false }
+        { "id": "003.1", "text": "Correção da visualização: as visões por semana, dia e agenda devem funcionar corretamente com exibição estável das tarefas cadastradas", "done": false },
+        { "id": "003.2", "text": "Correção no salvamento: ao criar ou editar tarefa, salvar corretamente e exibir de forma imediata e consistente", "done": false },
+        { "id": "003.3", "text": "Correção da sobreposição: tarefas com horários diferentes não devem aparecer sobrepostas; revisar lógica de posicionamento visual para que cada tarefa ocupe seu intervalo correto", "done": false }
       ]
     },
     {
@@ -43,10 +45,10 @@
       "title": "Simulados Externos › Nota TRI",
       "priority": "media",
       "status": "backlog",
-      "description": "Adicionar campo opcional para registro de Nota TRI em simulados externos, com exibição gráfica comparativa das notas ao longo do tempo.",
+      "description": "Ao inserir dados de simulado externo, não há campo para registrar a nota TRI. Isso limita a análise pedagógica, pois acertos e taxa de acerto mostram apenas desempenho quantitativo, sem representar o desempenho no modelo ENEM (Teoria de Resposta ao Item). Nem todos os simulados externos disponibilizam a nota TRI, então o preenchimento não pode ser obrigatório.",
       "subtasks": [
-        { "id": "004.1", "text": "Campo opcional para Nota TRI", "done": false },
-        { "id": "004.2", "text": "Gráfico comparativo de notas TRI", "done": false }
+        { "id": "004.1", "text": "Adicionar campo opcional de nota TRI para cada área do conhecimento do ENEM na tela Simulados Externos › Inserir Dados", "done": false },
+        { "id": "004.2", "text": "Exibir gráfico de linhas com marcadores para acompanhamento do histórico de notas TRI, complementando o gráfico atual de acertos/taxa de acerto", "done": false }
       ]
     },
     {
@@ -54,9 +56,10 @@
       "title": "Redirecionamento Botão Aulas",
       "priority": "baixa",
       "status": "backlog",
-      "description": "Ajustar o botão de aulas para redirecionar o aluno diretamente à lista de aulas, eliminando etapas intermediárias desnecessárias na navegação.",
+      "description": "Ao clicar no botão 'Aulas' na página inicial, o aluno está sendo direcionado para a lista de planos, quando o esperado seria o acesso direto à lista de aulas do seu plano.",
       "subtasks": [
-        { "id": "005.1", "text": "Redirecionar botão diretamente para lista de aulas", "done": false }
+        { "id": "005.1", "text": "Se o aluno possui apenas um plano ativo, direcionar direto para a lista de aulas", "done": false },
+        { "id": "005.2", "text": "Se houver mais de um plano vinculado, solicitar seleção do plano antes de exibir as aulas", "done": false }
       ]
     }
   ]
