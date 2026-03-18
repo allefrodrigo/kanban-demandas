@@ -147,4 +147,32 @@ function formatDate(dateStr) {
   return `${d}/${m}/${y}${time}`;
 }
 
-document.addEventListener('DOMContentLoaded', init);
+// ─── Theme toggle ───────────────────────────────────────────
+function initTheme() {
+  const saved = localStorage.getItem('theme');
+  if (saved) document.documentElement.setAttribute('data-theme', saved);
+
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+
+  updateToggleIcon(btn);
+
+  btn.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateToggleIcon(btn);
+  });
+}
+
+function updateToggleIcon(btn) {
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  btn.textContent = isLight ? '☽' : '☀';
+  btn.title = isLight ? 'Modo escuro' : 'Modo claro';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+  init();
+});

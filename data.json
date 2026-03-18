@@ -7,7 +7,7 @@
       "id": "001",
       "title": "Prova Aleatória",
       "priority": "alta",
-      "status": "analise",
+      "status": "andamento",
       "description": "A regra atual não permite escolher livremente questões apenas do banco interno ou apenas do banco externo. Além disso, como os alunos realizarão simulados ENEM dentro da plataforma, permitir acesso irrestrito ao banco interno pode fazer com que visualizem antecipadamente questões que farão parte dos simulados. A funcionalidade deve permitir montar a prova aleatória com maior liberdade de escolha entre os bancos.",
       "subtasks": [
         { "id": "001.1", "text": "Permitir escolha de somente questões do banco interno (com regra de proteção às questões dos simulados ENEM)", "done": false },
