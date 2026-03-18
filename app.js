@@ -141,8 +141,10 @@ function buildProgress(done, total, pct, subtasks) {
 
 function formatDate(dateStr) {
   if (!dateStr) return '—';
-  const [y, m, d] = dateStr.split('-');
-  return `${d}/${m}/${y}`;
+  const [datePart, timePart] = dateStr.split('T');
+  const [y, m, d] = datePart.split('-');
+  const time = timePart ? ` às ${timePart}` : '';
+  return `${d}/${m}/${y}${time}`;
 }
 
 document.addEventListener('DOMContentLoaded', init);
