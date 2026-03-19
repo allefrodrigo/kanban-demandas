@@ -219,13 +219,15 @@ body {
 /* ─── Column ──────────────────────────────────────────────── */
 .kanban-col {
   background: var(--bg-col);
-  border: 1px solid var(--border);
-  border-top: 3px solid var(--col-color, #4a5568);
-  border-radius: var(--card-radius);
   min-width: var(--col-min-width);
   display: flex;
   flex-direction: column;
   animation: col-enter 0.4s ease both;
+}
+
+.kanban-col + .kanban-col {
+  border-left: 1px solid var(--border);
+  padding-left: 16px;
 }
 
 @keyframes col-enter {
