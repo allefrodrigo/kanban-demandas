@@ -10,9 +10,9 @@
       "status": "andamento",
       "description": "A regra atual não permite escolher livremente questões apenas do banco interno ou apenas do banco externo. Além disso, como os alunos realizarão simulados ENEM dentro da plataforma, permitir acesso irrestrito ao banco interno pode fazer com que visualizem antecipadamente questões que farão parte dos simulados. A funcionalidade deve permitir montar a prova aleatória com maior liberdade de escolha entre os bancos.",
       "subtasks": [
-        { "id": "001.1", "text": "Permitir escolha de somente questões do banco interno (com regra de proteção às questões dos simulados ENEM)", "done": false },
-        { "id": "001.2", "text": "Permitir escolha de somente questões do banco externo", "done": false },
-        { "id": "001.3", "text": "Permitir combinação entre os dois bancos", "done": false }
+        { "id": "001.1", "text": "Permitir escolha de somente questões do banco interno (com regra de proteção às questões dos simulados ENEM)", "done": true },
+        { "id": "001.2", "text": "Permitir escolha de somente questões do banco externo", "done": true },
+        { "id": "001.3", "text": "Permitir combinação entre os dois bancos", "done": true }
       ]
     },
     {
@@ -69,10 +69,10 @@
       "status": "revisao",
       "description": "Alunos do 9º ano não conseguem finalizar o cadastro porque o campo 'série' é obrigatório e não possui a opção correspondente. Além disso, o campo 'universidade' deve permitir que o aluno indique que ainda não sabe qual universidade deseja, sem bloquear o cadastro.",
       "subtasks": [
-        { "id": "006.1", "text": "Adicionar a opção '9º ano' no campo de seleção de série para que alunos do ensino fundamental possam concluir o cadastro", "done": false },
-        { "id": "006.2", "text": "Adicionar checkbox abaixo do input de universidade com o texto 'Não sei ainda'", "done": false },
-        { "id": "006.3", "text": "Ao marcar o checkbox, desativar o input de universidade (impedir digitação) e preencher automaticamente o valor 'Não sei ainda' no campo", "done": false },
-        { "id": "006.4", "text": "Ao desmarcar o checkbox, reativar o input de universidade e limpar o valor preenchido automaticamente", "done": false }
+        { "id": "006.1", "text": "Adicionar a opção '9º ano' no campo de seleção de série para que alunos do ensino fundamental possam concluir o cadastro", "done": true },
+        { "id": "006.2", "text": "Adicionar checkbox abaixo do input de universidade com o texto 'Não sei ainda'", "done": true },
+        { "id": "006.3", "text": "Ao marcar o checkbox, desativar o input de universidade (impedir digitação) e preencher automaticamente o valor 'Não sei ainda' no campo", "done": true },
+        { "id": "006.4", "text": "Ao desmarcar o checkbox, reativar o input de universidade e limpar o valor preenchido automaticamente", "done": true }
       ]
     }
   ]
