@@ -226,8 +226,18 @@ body {
 }
 
 .kanban-col + .kanban-col {
-  border-left: 1px solid var(--border);
+  position: relative;
   padding-left: 16px;
+}
+
+.kanban-col + .kanban-col::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  height: 40px;
+  width: 1px;
+  background: var(--border);
 }
 
 @keyframes col-enter {
