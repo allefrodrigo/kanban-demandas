@@ -291,7 +291,6 @@ body {
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--priority-color, var(--border));
   border-radius: var(--card-radius);
   padding: 14px;
   cursor: default;
