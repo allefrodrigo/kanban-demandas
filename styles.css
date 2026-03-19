@@ -235,7 +235,7 @@ body {
   position: absolute;
   left: 0;
   top: 12px;
-  height: 40px;
+  height: 120px;
   width: 1px;
   background: var(--border);
 }
