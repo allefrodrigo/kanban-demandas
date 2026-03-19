@@ -175,7 +175,124 @@ function updateToggleIcon(btn) {
   btn.title = isLight ? 'Modo escuro' : 'Modo claro';
 }
 
+// ─── Demand form (multi-step) ────────────────────────────────
+function initDemandForm() {
+  const overlay = document.getElementById('demand-overlay');
+  const openBtn = document.getElementById('open-demand');
+  const closeBtn = document.getElementById('demand-close');
+  const nextBtn = document.getElementById('step-next');
+  const backBtn = document.getElementById('step-back');
+  const progressFill = document.getElementById('dialog-progress-fill');
+
+  const TOTAL_STEPS = 6;
+  let current = 1;
+  let selectedPriority = '';
+
+  function showStep(n) {
+    current = n;
+    document.querySelectorAll('.dialog-step').forEach(el => {
+      el.classList.toggle('active', Number(el.dataset.step) === n);
+    });
+    backBtn.style.display = n > 1 ? '' : 'none';
+    nextBtn.textContent = n === TOTAL_STEPS ? 'Enviar solicitação' : 'Próximo';
+    progressFill.style.width = `${(n / TOTAL_STEPS) * 100}%`;
+
+    if (n === TOTAL_STEPS) buildPreview();
+  }
+
+  function getValues() {
+    return {
+      title: document.getElementById('demand-title').value.trim(),
+      problem: document.getElementById('demand-problem').value.trim(),
+      expected: document.getElementById('demand-expected').value.trim(),
+      link: document.getElementById('demand-link').value.trim(),
+      priority: selectedPriority,
+    };
+  }
+
+  function validate(step) {
+    const v = getValues();
+    if (step === 1 && !v.title) return 'Preencha o título.';
+    if (step === 2 && !v.problem) return 'Descreva a situação atual.';
+    if (step === 3 && !v.expected) return 'Descreva o comportamento esperado.';
+    if (step === 5 && !v.priority) return 'Selecione a prioridade.';
+    return null;
+  }
+
+  function buildPreview() {
+    const v = getValues();
+    const prioLabel = { alta: 'Alta', media: 'Média', baixa: 'Baixa' }[v.priority] || v.priority;
+    const linkLine = v.link ? `<div class="preview-row"><span class="preview-key">Link:</span> <a href="${encodeURI(v.link)}" target="_blank" rel="noopener">${v.link}</a></div>` : '';
+    document.getElementById('demand-preview').innerHTML = `
+      <div class="preview-row"><span class="preview-key">Título:</span> ${v.title}</div>
+      <div class="preview-row"><span class="preview-key">Problema:</span> ${v.problem}</div>
+      <div class="preview-row"><span class="preview-key">Esperado:</span> ${v.expected}</div>
+      ${linkLine}
+      <div class="preview-row"><span class="preview-key">Prioridade:</span> ${prioLabel}</div>
+    `;
+  }
+
+  function buildWhatsAppMessage() {
+    const v = getValues();
+    const prioLabel = { alta: 'Alta', media: 'Média', baixa: 'Baixa' }[v.priority] || v.priority;
+    let msg = `*Nova Solicitação de Demanda*\n\n`;
+    msg += `*Título:* ${v.title}\n\n`;
+    msg += `*Situação atual:* ${v.problem}\n\n`;
+    msg += `*Comportamento esperado:* ${v.expected}\n\n`;
+    if (v.link) msg += `*Link:* ${v.link}\n\n`;
+    msg += `*Prioridade:* ${prioLabel}`;
+    return msg;
+  }
+
+  function resetForm() {
+    document.getElementById('demand-title').value = '';
+    document.getElementById('demand-problem').value = '';
+    document.getElementById('demand-expected').value = '';
+    document.getElementById('demand-link').value = '';
+    selectedPriority = '';
+    document.querySelectorAll('.priority-opt').forEach(b => b.classList.remove('selected'));
+    showStep(1);
+  }
+
+  function open() { overlay.classList.add('open'); showStep(1); }
+  function close() { overlay.classList.remove('open'); resetForm(); }
+
+  openBtn.addEventListener('click', open);
+  closeBtn.addEventListener('click', close);
+  overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+
+  document.getElementById('priority-options').addEventListener('click', e => {
+    const btn = e.target.closest('.priority-opt');
+    if (!btn) return;
+    selectedPriority = btn.dataset.value;
+    document.querySelectorAll('.priority-opt').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+  });
+
+  nextBtn.addEventListener('click', () => {
+    const err = validate(current);
+    if (err) {
+      nextBtn.classList.add('shake');
+      setTimeout(() => nextBtn.classList.remove('shake'), 400);
+      return;
+    }
+    if (current === TOTAL_STEPS) {
+      const msg = buildWhatsAppMessage();
+      const url = `https://wa.me/5584997069841?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+      close();
+      return;
+    }
+    showStep(current + 1);
+  });
+
+  backBtn.addEventListener('click', () => {
+    if (current > 1) showStep(current - 1);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   init();
+  initDemandForm();
 });

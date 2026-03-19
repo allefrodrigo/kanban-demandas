@@ -74,6 +74,25 @@
         { "id": "006.3", "text": "Ao marcar o checkbox, desativar o input de universidade (impedir digitação) e preencher automaticamente o valor 'Não sei ainda' no campo", "done": true },
         { "id": "006.4", "text": "Ao desmarcar o checkbox, reativar o input de universidade e limpar o valor preenchido automaticamente", "done": true }
       ]
+    },
+    {
+      "id": "007",
+      "title": "Configurar Gateway de Pagamento",
+      "priority": "alta",
+      "status": "backlog",
+      "description": "O gateway de pagamento precisa ser configurado na plataforma. Ainda não foi feito o upload do certificado na VPS nem o download do certificado. Após a configuração, será necessário realizar um teste gerando um código Pix e efetuando um pagamento de R$ 0,01 para ativar um plano teste.",
+      "subtasks": [
+        { "id": "007.1", "text": "Baixar o certificado e colocar na pasta da VPS (Prof. Wendel)", "done": false },
+        { "id": "007.2", "text": "Baixar o certificado e colocar na pasta da VPS (Prof. Lucas)", "done": false }
+      ]
+    },
+    {
+      "id": "008",
+      "title": "Atribuir Domínio atatica.com.br",
+      "priority": "media",
+      "status": "backlog",
+      "description": "Migrar o projeto do domínio atual (https://atatica.plataformaestudos.online/) para o domínio definitivo atatica.com.br.",
+      "subtasks": []
     }
   ]
 }
