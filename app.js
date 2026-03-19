@@ -73,7 +73,7 @@ function buildColumn(id, config, demands) {
 
   const cardsEl = col.querySelector('.col-cards');
   demands.forEach((demand, i) => {
-    const card = buildCard(demand);
+    const card = buildCard(demand, id);
     card.style.animationDelay = `${0.1 + i * 0.06}s`;
     cardsEl.appendChild(card);
   });
@@ -81,11 +81,13 @@ function buildColumn(id, config, demands) {
   return col;
 }
 
-function buildCard(demand) {
+function buildCard(demand, colId) {
   const priority = PRIORITY_CONFIG[demand.priority] || { label: demand.priority, cssVar: '#888' };
   const total = demand.subtasks ? demand.subtasks.length : 0;
   const done = demand.subtasks ? demand.subtasks.filter(s => s.done).length : 0;
   const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+  const allDone = total > 0 && done === total;
+  const showTestingBadge = colId === 'andamento' && allDone;
 
   const card = document.createElement('article');
   card.className = 'card';
@@ -99,6 +101,7 @@ function buildCard(demand) {
     </div>
     <h2 class="card-title">${demand.title}</h2>
     ${total > 0 ? buildProgress(done, total, pct, demand.subtasks) : ''}
+    ${showTestingBadge ? '<div class="testing-badge">Essa tarefa está sendo testada</div>' : ''}
     <button class="expand-btn" aria-expanded="false" aria-controls="desc-${demand.id}">
       Ver detalhes
     </button>

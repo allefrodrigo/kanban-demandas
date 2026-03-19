@@ -410,6 +410,26 @@ body {
   color: var(--priority-baixa);
 }
 
+/* ─── Testing Badge ──────────────────────────────────────── */
+.testing-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--col-andamento);
+  background: rgba(194, 98, 10, 0.1);
+  border: 1px solid var(--col-andamento);
+  border-radius: 3px;
+  padding: 5px 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  animation: pulse-badge 2s ease-in-out infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
 /* ─── Expand / Description ────────────────────────────────── */
 .expand-btn {
   display: inline-flex;
