@@ -3,7 +3,7 @@
 const COLUMN_CONFIG = {
   backlog:   { label: 'Backlog',      color: 'var(--col-backlog)' },
   analise:   { label: 'Em Análise',   color: 'var(--col-analise)' },
-  andamento: { label: 'Em Andamento', color: 'var(--col-andamento)' },
+  andamento: { label: 'Trabalhando no Momento', color: 'var(--col-andamento)' },
   revisao:   { label: 'Em Revisão',   color: 'var(--col-revisao)' },
   concluido: { label: 'Concluído',    color: 'var(--col-concluido)' },
 };

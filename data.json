@@ -1,6 +1,6 @@
 {
   "project": "A Tática — Kanban",
-  "lastUpdated": "2026-03-18T13:21",
+  "lastUpdated": "2026-03-19T06:24",
   "columns": ["backlog", "analise", "andamento", "revisao", "concluido"],
   "demands": [
     {
@@ -19,7 +19,7 @@
       "id": "002",
       "title": "Simulados",
       "priority": "alta",
-      "status": "analise",
+      "status": "backlog",
       "description": "Alunos relatam dificuldade para visualizar o simulado semanal na tela, só conseguindo encontrar o botão 'clique aqui para iniciar' ao diminuir o zoom manualmente. O aluno também consegue ver informações de disponibilidade para outros planos e instituições, poluindo a interface e aumentando o card desnecessariamente. A ordenação atual não favorece a sequência pedagógica desejada, fazendo com que alguns alunos realizem simulados mais recentes antes dos anteriores.",
       "subtasks": [
         { "id": "002.1", "text": "Corrigir layout e responsividade do card para que o botão de início fique visível sem alterar zoom", "done": false },
@@ -32,7 +32,7 @@
       "id": "003",
       "title": "Meus Estudos › Cronograma",
       "priority": "media",
-      "status": "backlog",
+      "status": "analise",
       "description": "Alunos relatam falhas no módulo de cronograma: dificuldade para visualizar corretamente a semana, agenda ou dia; falhas ao salvar tarefas; e sobreposição de tarefas na agenda mesmo quando os horários cadastrados são diferentes.",
       "subtasks": [
         { "id": "003.1", "text": "Correção da visualização: as visões por semana, dia e agenda devem funcionar corretamente com exibição estável das tarefas cadastradas", "done": false },
@@ -44,7 +44,7 @@
       "id": "004",
       "title": "Simulados Externos › Nota TRI",
       "priority": "media",
-      "status": "backlog",
+      "status": "analise",
       "description": "Ao inserir dados de simulado externo, não há campo para registrar a nota TRI. Isso limita a análise pedagógica, pois acertos e taxa de acerto mostram apenas desempenho quantitativo, sem representar o desempenho no modelo ENEM (Teoria de Resposta ao Item). Nem todos os simulados externos disponibilizam a nota TRI, então o preenchimento não pode ser obrigatório.",
       "subtasks": [
         { "id": "004.1", "text": "Adicionar campo opcional de nota TRI para cada área do conhecimento do ENEM na tela Simulados Externos › Inserir Dados", "done": false },
