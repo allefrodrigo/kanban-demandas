@@ -1,6 +1,6 @@
 {
   "project": "A Tática — Kanban",
-  "lastUpdated": "2026-03-19T13:00",
+  "lastUpdated": "2026-03-19T16:50",
   "columns": ["backlog", "analise", "andamento", "revisao", "concluido"],
   "demands": [
     {
@@ -66,7 +66,7 @@
       "id": "006",
       "title": "Cadastro de Alunos › Série e Universidade",
       "priority": "alta",
-      "status": "andamento",
+      "status": "revisao",
       "description": "Alunos do 9º ano não conseguem finalizar o cadastro porque o campo 'série' é obrigatório e não possui a opção correspondente. Além disso, o campo 'universidade' deve permitir que o aluno indique que ainda não sabe qual universidade deseja, sem bloquear o cadastro.",
       "subtasks": [
         { "id": "006.1", "text": "Adicionar a opção '9º ano' no campo de seleção de série para que alunos do ensino fundamental possam concluir o cadastro", "done": false },
