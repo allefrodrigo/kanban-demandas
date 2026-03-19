@@ -1,6 +1,6 @@
 {
   "project": "A Tática — Kanban",
-  "lastUpdated": "2026-03-19T06:24",
+  "lastUpdated": "2026-03-19T13:00",
   "columns": ["backlog", "analise", "andamento", "revisao", "concluido"],
   "demands": [
     {
@@ -60,6 +60,19 @@
       "subtasks": [
         { "id": "005.1", "text": "Se o aluno possui apenas um plano ativo, direcionar direto para a lista de aulas", "done": false },
         { "id": "005.2", "text": "Se houver mais de um plano vinculado, solicitar seleção do plano antes de exibir as aulas", "done": false }
+      ]
+    },
+    {
+      "id": "006",
+      "title": "Cadastro de Alunos › Série e Universidade",
+      "priority": "alta",
+      "status": "andamento",
+      "description": "Alunos do 9º ano não conseguem finalizar o cadastro porque o campo 'série' é obrigatório e não possui a opção correspondente. Além disso, o campo 'universidade' deve permitir que o aluno indique que ainda não sabe qual universidade deseja, sem bloquear o cadastro.",
+      "subtasks": [
+        { "id": "006.1", "text": "Adicionar a opção '9º ano' no campo de seleção de série para que alunos do ensino fundamental possam concluir o cadastro", "done": false },
+        { "id": "006.2", "text": "Adicionar checkbox abaixo do input de universidade com o texto 'Não sei ainda'", "done": false },
+        { "id": "006.3", "text": "Ao marcar o checkbox, desativar o input de universidade (impedir digitação) e preencher automaticamente o valor 'Não sei ainda' no campo", "done": false },
+        { "id": "006.4", "text": "Ao desmarcar o checkbox, reativar o input de universidade e limpar o valor preenchido automaticamente", "done": false }
       ]
     }
   ]
