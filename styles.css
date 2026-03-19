@@ -131,6 +131,10 @@ body {
   backdrop-filter: blur(12px);
 }
 
+.site-header .header-inner {
+  position: relative;
+}
+
 .header-inner {
   display: flex;
   align-items: center;
@@ -139,18 +143,30 @@ body {
   max-width: 100%;
 }
 
+.header-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .header-brand {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.brand-mark {
-  font-size: 18px;
-  color: var(--col-andamento);
-  opacity: 0.9;
-  line-height: 1;
-}
+/* brand-mark removed — theme toggle replaces it */
 
 .project-name {
   font-family: var(--font-ui);
@@ -161,13 +177,7 @@ body {
   color: var(--text-bright);
 }
 
-.header-meta {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-}
+/* header-meta replaced by header-center + header-actions */
 
 .meta-label {
   color: var(--text-muted);
@@ -817,5 +827,9 @@ body {
 
   .project-name {
     font-size: 15px;
+  }
+
+  .header-center {
+    display: none;
   }
 }

@@ -83,7 +83,11 @@
       "description": "O gateway de pagamento precisa ser configurado na plataforma. Ainda não foi feito o upload do certificado na VPS nem o download do certificado. Após a configuração, será necessário realizar um teste gerando um código Pix e efetuando um pagamento de R$ 0,01 para ativar um plano teste.",
       "subtasks": [
         { "id": "007.1", "text": "Baixar o certificado e colocar na pasta da VPS (Prof. Wendel)", "done": false },
-        { "id": "007.2", "text": "Baixar o certificado e colocar na pasta da VPS (Prof. Lucas)", "done": false }
+        { "id": "007.2", "text": "Baixar o certificado e colocar na pasta da VPS (Prof. Lucas)", "done": false },
+        { "id": "007.3", "text": "Configurar .env com client_id do EfiPay (Prof. Wendel)", "done": false },
+        { "id": "007.4", "text": "Configurar .env com client_id do EfiPay (Prof. Lucas)", "done": false },
+        { "id": "007.5", "text": "Realizar teste de geração de código Pix e pagamento de R$ 0,01 (Prof. Wendel)", "done": false },
+        { "id": "007.6", "text": "Realizar teste de geração de código Pix e pagamento de R$ 0,01 (Prof. Lucas)", "done": false }
       ]
     },
     {
@@ -92,7 +96,9 @@
       "priority": "media",
       "status": "backlog",
       "description": "Migrar o projeto do domínio atual (https://atatica.plataformaestudos.online/) para o domínio definitivo atatica.com.br.",
-      "subtasks": []
+      "subtasks": [
+        { "id": "008.1", "text": "Configurar DNS para o domínio atatica.com.br", "done": false }
+      ]
     }
   ]
 }
