@@ -20,13 +20,26 @@
       "id": "002",
       "title": "QR Codes da Página /sobre",
       "priority": "media",
-      "status": "analise",
+      "status": "concluido",
       "description": "Os QR codes presentes na página /sobre estão apontando para links incorretos ou desatualizados. É necessário gerar novos QR codes com os links corretos e substituí-los na página.",
       "subtasks": [
-        { "id": "002.1", "text": "Levantar os links corretos que cada QR code deve apontar", "done": false },
-        { "id": "002.2", "text": "Gerar novos QR codes com os links atualizados", "done": false },
-        { "id": "002.3", "text": "Substituir as imagens dos QR codes na página /sobre", "done": false },
-        { "id": "002.4", "text": "Testar a leitura dos QR codes para confirmar o redirecionamento correto", "done": false }
+        { "id": "002.1", "text": "Levantar os links corretos que cada QR code deve apontar", "done": true },
+        { "id": "002.2", "text": "Gerar novos QR codes com os links atualizados", "done": true },
+        { "id": "002.3", "text": "Substituir as imagens dos QR codes na página /sobre", "done": true },
+        { "id": "002.4", "text": "Testar a leitura dos QR codes para confirmar o redirecionamento correto", "done": true }
+      ]
+    },
+    {
+      "id": "003",
+      "title": "Corrigir Nginx para Acesso via Subdomínio",
+      "priority": "alta",
+      "status": "concluido",
+      "description": "O acesso à aplicação está expondo a porta diretamente na URL (ex: dominio.com:3000), o que é inadequado para produção. O Nginx deve ser configurado como proxy reverso para que o acesso seja feito diretamente pelo domínio ou subdomínio, sem exposição de porta ao usuário final.",
+      "subtasks": [
+        { "id": "003.1", "text": "Configurar o bloco server no Nginx com proxy_pass apontando para a porta da aplicação", "done": true },
+        { "id": "003.2", "text": "Configurar o subdomínio no DNS para apontar ao servidor", "done": true },
+        { "id": "003.3", "text": "Garantir que o firewall bloqueie acesso externo direto à porta da aplicação", "done": true },
+        { "id": "003.4", "text": "Testar acesso via subdomínio sem exposição de porta na URL", "done": true }
       ]
     }
   ]
