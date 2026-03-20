@@ -41,6 +41,18 @@
         { "id": "003.3", "text": "Garantir que o firewall bloqueie acesso externo direto à porta da aplicação", "done": true },
         { "id": "003.4", "text": "Testar acesso via subdomínio sem exposição de porta na URL", "done": true }
       ]
+    },
+    {
+      "id": "004",
+      "title": "Atualizar Instruções de Instalação do PWA no iOS",
+      "priority": "media",
+      "status": "analise",
+      "description": "As instruções de como instalar o PWA no iOS estão desatualizadas. Atualizações recentes do iOS alteraram os ícones e a localização dos botões nos navegadores, tornando o passo a passo atual incorreto para o usuário. É necessário revisar e atualizar o texto e as referências visuais para refletir a interface atual do iOS.",
+      "subtasks": [
+        { "id": "004.1", "text": "Identificar as mudanças de ícones e localização nos navegadores do iOS atual", "done": false },
+        { "id": "004.2", "text": "Reescrever o passo a passo de instalação do PWA com as referências visuais corretas", "done": false },
+        { "id": "004.3", "text": "Validar as instruções em dispositivo iOS atualizado", "done": false }
+      ]
     }
   ]
 }
