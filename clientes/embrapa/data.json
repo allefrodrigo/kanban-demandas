@@ -62,9 +62,8 @@
       "description": "O ícone atual do aplicativo contém texto e fundo branco. A imagem deve ser editada para remover o texto, manter apenas o logo e tornar o fundo transparente, garantindo uma apresentação mais limpa e profissional em todas as plataformas.",
       "subtasks": [
         { "id": "005.1", "text": "Remover o texto presente na imagem do ícone", "done": false },
-        { "id": "005.2", "text": "Remover o fundo branco e aplicar transparência", "done": true },
-        { "id": "005.3", "text": "Exportar o ícone nos formatos e tamanhos necessários para a aplicação", "done": false },
-        { "id": "005.4", "text": "Substituir o ícone atual e validar a exibição nas plataformas", "done": false }
+        { "id": "005.2", "text": "Exportar o ícone nos formatos e tamanhos necessários para a aplicação", "done": false },
+        { "id": "005.3", "text": "Substituir o ícone atual e validar a exibição nas plataformas", "done": false }
       ]
     },
     {
