@@ -1,0 +1,20 @@
+{
+  "project": "A Tática — Kanban",
+  "lastUpdated": "2026-03-19T20:23",
+  "whatsapp": "5584997069841",
+  "columns": ["backlog", "analise", "andamento", "revisao", "concluido"],
+  "demands": [
+    {
+      "id": "001",
+      "title": "Prova Aleatória",
+      "priority": "alta",
+      "status": "andamento",
+      "description": "A regra atual não permite escolher livremente questões apenas do banco interno ou apenas do banco externo. Além disso, como os alunos realizarão simulados ENEM dentro da plataforma, permitir acesso irrestrito ao banco interno pode fazer com que visualizem antecipadamente questões que farão parte dos simulados. A funcionalidade deve permitir montar a prova aleatória com maior liberdade de escolha entre os bancos.",
+      "subtasks": [
+        { "id": "001.1", "text": "Permitir escolha de somente questões do banco interno (com regra de proteção às questões dos simulados ENEM)", "done": true },
+        { "id": "001.2", "text": "Permitir escolha de somente questões do banco externo", "done": true },
+        { "id": "001.3", "text": "Permitir combinação entre os dois bancos", "done": true }
+      ]
+    }
+  ]
+}

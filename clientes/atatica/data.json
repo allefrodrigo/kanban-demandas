@@ -1,6 +1,7 @@
 {
   "project": "A Tática — Kanban",
   "lastUpdated": "2026-03-19T20:23",
+  "whatsapp": "5584997069841",
   "columns": ["backlog", "analise", "andamento", "revisao", "concluido"],
   "demands": [
     {

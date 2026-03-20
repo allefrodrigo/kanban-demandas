@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
 /* ─── Reset & Base ─────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -6,39 +8,32 @@
 }
 
 :root {
-  /* Background layers */
   --bg:          #080c14;
   --bg-card:     #141b2d;
   --bg-col:      #0a0f1a;
   --bg-header:   #060912;
 
-  /* Borders */
   --border:      #1c2538;
   --border-bright: #2a3650;
 
-  /* Text */
   --text:        #c0cedf;
   --text-muted:  #4a5a72;
   --text-bright: #eef2fa;
   --text-dim:    #8899b2;
 
-  /* Column accent colors */
   --col-backlog:   #4a5568;
   --col-analise:   #2563a8;
   --col-andamento: #c2620a;
   --col-revisao:   #7c3aed;
   --col-concluido: #16a34a;
 
-  /* Priority */
   --priority-alta:  #f85149;
   --priority-media: #d29922;
   --priority-baixa: #3fb950;
 
-  /* Typography */
   --font-ui:   'Rajdhani', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
 
-  /* Sizing */
   --card-radius: 6px;
   --col-min-width: 260px;
 }
@@ -110,7 +105,6 @@ body {
   min-height: 100vh;
 }
 
-/* Subtle noise texture overlay */
 .noise-overlay {
   position: fixed;
   inset: 0;
@@ -166,8 +160,6 @@ body {
   gap: 12px;
 }
 
-/* brand-mark removed — theme toggle replaces it */
-
 .project-name {
   font-family: var(--font-ui);
   font-size: 18px;
@@ -176,8 +168,6 @@ body {
   text-transform: uppercase;
   color: var(--text-bright);
 }
-
-/* header-meta replaced by header-center + header-actions */
 
 .meta-label {
   color: var(--text-muted);
@@ -298,9 +288,7 @@ body {
   flex: 1;
 }
 
-.col-cards:empty::after {
-  content: 'Nenhuma demanda';
-  display: block;
+.col-empty {
   text-align: center;
   color: var(--text-muted);
   font-family: var(--font-mono);
@@ -623,7 +611,6 @@ body {
 
 .dialog-progress-fill {
   height: 100%;
-  width: 16.6%;
   background: var(--col-andamento);
   transition: width 0.3s ease;
 }
@@ -635,11 +622,6 @@ body {
 }
 
 .dialog-step {
-  display: none;
-}
-
-.dialog-step.active {
-  display: block;
   animation: step-in 0.2s ease;
 }
 
@@ -809,6 +791,47 @@ body {
 
 .shake {
   animation: shake 0.3s ease;
+}
+
+/* ─── Error Page ──────────────────────────────────────────── */
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.error-content {
+  text-align: center;
+  max-width: 480px;
+  padding: 48px 24px;
+}
+
+.error-icon {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.error-title {
+  color: var(--priority-alta);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  font-family: var(--font-ui);
+}
+
+.error-hint {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  line-height: 1.6;
+}
+
+.error-hint code {
+  background: var(--border);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.8rem;
 }
 
 /* ─── Responsive ──────────────────────────────────────────── */
