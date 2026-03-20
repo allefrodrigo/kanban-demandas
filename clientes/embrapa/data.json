@@ -46,7 +46,7 @@
       "id": "004",
       "title": "Atualizar Instruções de Instalação do PWA no iOS",
       "priority": "media",
-      "status": "analise",
+      "status": "andamento",
       "description": "As instruções de como instalar o PWA no iOS estão desatualizadas. Atualizações recentes do iOS alteraram os ícones e a localização dos botões nos navegadores, tornando o passo a passo atual incorreto para o usuário. É necessário revisar e atualizar o texto e as referências visuais para refletir a interface atual do iOS.",
       "subtasks": [
         { "id": "004.1", "text": "Identificar as mudanças de ícones e localização nos navegadores do iOS atual", "done": false },
@@ -58,11 +58,11 @@
       "id": "005",
       "title": "Ajustar Imagem do Ícone do Aplicativo",
       "priority": "media",
-      "status": "analise",
+      "status": "andamento",
       "description": "O ícone atual do aplicativo contém texto e fundo branco. A imagem deve ser editada para remover o texto, manter apenas o logo e tornar o fundo transparente, garantindo uma apresentação mais limpa e profissional em todas as plataformas.",
       "subtasks": [
         { "id": "005.1", "text": "Remover o texto presente na imagem do ícone", "done": false },
-        { "id": "005.2", "text": "Remover o fundo branco e aplicar transparência", "done": false },
+        { "id": "005.2", "text": "Remover o fundo branco e aplicar transparência", "done": true },
         { "id": "005.3", "text": "Exportar o ícone nos formatos e tamanhos necessários para a aplicação", "done": false },
         { "id": "005.4", "text": "Substituir o ícone atual e validar a exibição nas plataformas", "done": false }
       ]
