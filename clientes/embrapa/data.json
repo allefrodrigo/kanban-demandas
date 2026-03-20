@@ -8,12 +8,12 @@
       "id": "001",
       "title": "Ícone do Atalho na Tela de Início",
       "priority": "media",
-      "status": "analise",
+      "status": "concluido",
       "description": "O ícone exibido no atalho da tela de início do dispositivo ainda utiliza a imagem antiga do aplicativo. A imagem correta já está presente na página de login e deve substituir o ícone atual para manter a identidade visual atualizada.",
       "subtasks": [
-        { "id": "001.1", "text": "Identificar a imagem utilizada atualmente como ícone do atalho na tela de início", "done": false },
-        { "id": "001.2", "text": "Substituir pelo ícone correto já presente na página de login", "done": false },
-        { "id": "001.3", "text": "Validar a exibição do novo ícone em dispositivos Android e iOS", "done": false }
+        { "id": "001.1", "text": "Identificar a imagem utilizada atualmente como ícone do atalho na tela de início", "done": true },
+        { "id": "001.2", "text": "Substituir pelo ícone correto já presente na página de login", "done": true },
+        { "id": "001.3", "text": "Validar a exibição do novo ícone em dispositivos Android e iOS", "done": true }
       ]
     },
     {
