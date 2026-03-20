@@ -1,6 +1,6 @@
 {
   "project": "Kanban",
-  "lastUpdated": "2026-03-20T10:00",
+  "lastUpdated": "2026-03-20T10:43",
   "whatsapp": "5500000000000",
   "columns": ["backlog", "analise", "andamento", "revisao", "concluido"],
   "demands": [
