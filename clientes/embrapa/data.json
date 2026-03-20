@@ -1,53 +1,32 @@
 {
   "project": "Kanban",
-  "lastUpdated": "2026-03-19T21:00",
+  "lastUpdated": "2026-03-20T10:00",
   "whatsapp": "5500000000000",
   "columns": ["backlog", "analise", "andamento", "revisao", "concluido"],
   "demands": [
     {
       "id": "001",
-      "title": "Lorem Ipsum Dolor Sit",
-      "priority": "alta",
-      "status": "backlog",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "title": "Ícone do Atalho na Tela de Início",
+      "priority": "media",
+      "status": "analise",
+      "description": "O ícone exibido no atalho da tela de início do dispositivo ainda utiliza a imagem antiga do aplicativo. A imagem correta já está presente na página de login e deve substituir o ícone atual para manter a identidade visual atualizada.",
       "subtasks": [
-        { "id": "001.1", "text": "Lorem ipsum dolor sit amet consectetur", "done": false },
-        { "id": "001.2", "text": "Sed do eiusmod tempor incididunt", "done": false },
-        { "id": "001.3", "text": "Ut enim ad minim veniam quis nostrud", "done": false }
+        { "id": "001.1", "text": "Identificar a imagem utilizada atualmente como ícone do atalho na tela de início", "done": false },
+        { "id": "001.2", "text": "Substituir pelo ícone correto já presente na página de login", "done": false },
+        { "id": "001.3", "text": "Validar a exibição do novo ícone em dispositivos Android e iOS", "done": false }
       ]
     },
     {
       "id": "002",
-      "title": "Consectetur Adipiscing Elit",
+      "title": "QR Codes da Página /sobre",
       "priority": "media",
       "status": "analise",
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "description": "Os QR codes presentes na página /sobre estão apontando para links incorretos ou desatualizados. É necessário gerar novos QR codes com os links corretos e substituí-los na página.",
       "subtasks": [
-        { "id": "002.1", "text": "Duis aute irure dolor in reprehenderit", "done": true },
-        { "id": "002.2", "text": "Excepteur sint occaecat cupidatat", "done": false }
-      ]
-    },
-    {
-      "id": "003",
-      "title": "Sed Ut Perspiciatis Unde",
-      "priority": "alta",
-      "status": "andamento",
-      "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-      "subtasks": [
-        { "id": "003.1", "text": "Nemo enim ipsam voluptatem quia voluptas", "done": true },
-        { "id": "003.2", "text": "Neque porro quisquam est qui dolorem", "done": true },
-        { "id": "003.3", "text": "Quis autem vel eum iure reprehenderit", "done": false }
-      ]
-    },
-    {
-      "id": "004",
-      "title": "Quis Autem Vel Eum",
-      "priority": "baixa",
-      "status": "concluido",
-      "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.",
-      "subtasks": [
-        { "id": "004.1", "text": "At vero eos et accusamus et iusto", "done": true },
-        { "id": "004.2", "text": "Nam libero tempore cum soluta nobis", "done": true }
+        { "id": "002.1", "text": "Levantar os links corretos que cada QR code deve apontar", "done": false },
+        { "id": "002.2", "text": "Gerar novos QR codes com os links atualizados", "done": false },
+        { "id": "002.3", "text": "Substituir as imagens dos QR codes na página /sobre", "done": false },
+        { "id": "002.4", "text": "Testar a leitura dos QR codes para confirmar o redirecionamento correto", "done": false }
       ]
     }
   ]
