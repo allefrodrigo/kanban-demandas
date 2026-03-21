@@ -95,10 +95,10 @@
       "id": "008",
       "title": "Atribuir Domínio atatica.com.br",
       "priority": "media",
-      "status": "backlog",
+      "status": "concluido",
       "description": "Migrar o projeto do domínio atual (https://atatica.plataformaestudos.online/) para o domínio definitivo atatica.com.br.",
       "subtasks": [
-        { "id": "008.1", "text": "Configurar DNS para o domínio atatica.com.br", "done": false }
+        { "id": "008.1", "text": "Configurar DNS para o domínio atatica.com.br", "done": true }
       ]
     },
     {
