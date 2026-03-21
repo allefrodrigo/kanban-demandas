@@ -133,6 +133,19 @@
         { "id": "011.2", "text": "Adicionar fallback alt.content no transformToLocalFormat para texto das alternativas", "done": true },
         { "id": "011.3", "text": "Adicionar fallback campo 'area' no mapeamento disciplina→materiaId", "done": true }
       ]
+    },
+    {
+      "id": "012",
+      "title": "Banco de Questões › Preview sem renderização Markdown",
+      "priority": "media",
+      "status": "concluido",
+      "description": "Na tela /student/question/banco-questoes, o preview de questões (accordion e dialog 'Visualizar Questão') exibia conteúdo markdown como texto puro. Imagens (![alt](url)), negrito (**texto**), itálico (*texto*) e quebras de linha não eram renderizados. O componente RichTextRenderer já existia mas não era usado nessa página, e não suportava negrito/itálico.",
+      "subtasks": [
+        { "id": "012.1", "text": "Adicionar processamento de negrito (**texto** → <strong>) e itálico (*texto* → <em>) no RichTextRenderer", "done": true },
+        { "id": "012.2", "text": "Substituir Typography por RichTextRenderer nos campos contexto, enunciado, alternativas e explicação do accordion (linha expandida)", "done": true },
+        { "id": "012.3", "text": "Substituir Typography por RichTextRenderer nos mesmos campos do dialog de Visualizar Questão", "done": true },
+        { "id": "012.4", "text": "Remover seção separada de 'Imagens' (agora renderizadas inline pelo markdown)", "done": true }
+      ]
     }
   ]
 }
