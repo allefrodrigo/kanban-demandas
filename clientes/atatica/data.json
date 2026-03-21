@@ -1,6 +1,6 @@
 {
   "project": "Kanban",
-  "lastUpdated": "2026-03-19T20:23",
+  "lastUpdated": "2026-03-21T06:30",
   "whatsapp": "5584997069841",
   "columns": ["backlog", "analise", "andamento", "revisao", "concluido"],
   "demands": [
@@ -67,7 +67,7 @@
       "id": "006",
       "title": "Cadastro de Alunos › Série e Universidade",
       "priority": "alta",
-      "status": "revisao",
+      "status": "concluido",
       "description": "Alunos do 9º ano não conseguem finalizar o cadastro porque o campo 'série' é obrigatório e não possui a opção correspondente. Além disso, o campo 'universidade' deve permitir que o aluno indique que ainda não sabe qual universidade deseja, sem bloquear o cadastro.",
       "subtasks": [
         { "id": "006.1", "text": "Adicionar a opção '9º ano' no campo de seleção de série para que alunos do ensino fundamental possam concluir o cadastro", "done": true },
@@ -99,6 +99,16 @@
       "description": "Migrar o projeto do domínio atual (https://atatica.plataformaestudos.online/) para o domínio definitivo atatica.com.br.",
       "subtasks": [
         { "id": "008.1", "text": "Configurar DNS para o domínio atatica.com.br", "done": false }
+      ]
+    },
+    {
+      "id": "009",
+      "title": "<Select.Item /> has an empty string value",
+      "priority": "alta",
+      "status": "concluido",
+      "description": "Erro no componente <Select.Item /> do Radix UI ao receber value vazio (\"\"). As queries SQL (getExamSources, getSourceTypes, getLanguages, getAreas) filtravam valores NULL mas não strings vazias (''). Quando uma questão possuía string vazia nessas colunas, o valor era retornado e renderizado como <SelectItem value=\"\">, que o Radix UI rejeita.",
+      "subtasks": [
+        { "id": "009.1", "text": "Filtrar strings vazias ('') nas queries getExamSources, getSourceTypes, getLanguages e getAreas", "done": true }
       ]
     }
   ]
