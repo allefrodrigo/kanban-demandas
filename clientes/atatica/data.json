@@ -45,7 +45,7 @@
       "id": "004",
       "title": "Simulados Externos › Nota TRI",
       "priority": "media",
-      "status": "andamento",
+      "status": "revisao",
       "description": "Ao inserir dados de simulado externo, não há campo para registrar a nota TRI. Isso limita a análise pedagógica, pois acertos e taxa de acerto mostram apenas desempenho quantitativo, sem representar o desempenho no modelo ENEM (Teoria de Resposta ao Item). Nem todos os simulados externos disponibilizam a nota TRI, então o preenchimento não pode ser obrigatório.",
       "subtasks": [
         { "id": "004.1", "text": "Adicionar campo opcional de nota TRI para cada área do conhecimento do ENEM na tela Simulados Externos › Inserir Dados", "done": false },
