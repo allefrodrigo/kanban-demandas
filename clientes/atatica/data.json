@@ -33,7 +33,7 @@
       "id": "003",
       "title": "Meus Estudos › Cronograma",
       "priority": "media",
-      "status": "analise",
+      "status": "andamento",
       "description": "Alunos relatam falhas no módulo de cronograma: dificuldade para visualizar corretamente a semana, agenda ou dia; falhas ao salvar tarefas; e sobreposição de tarefas na agenda mesmo quando os horários cadastrados são diferentes.",
       "subtasks": [
         { "id": "003.1", "text": "Correção da visualização: as visões por semana, dia e agenda devem funcionar corretamente com exibição estável das tarefas cadastradas", "done": false },
@@ -80,7 +80,7 @@
       "id": "007",
       "title": "Configurar Gateway de Pagamento",
       "priority": "alta",
-      "status": "andamento",
+      "status": "analise",
       "description": "O gateway de pagamento precisa ser configurado na plataforma. Ainda não foi feito o upload do certificado na VPS nem o download do certificado. Após a configuração, será necessário realizar um teste gerando um código Pix e efetuando um pagamento de R$ 0,01 para ativar um plano teste.",
       "subtasks": [
         { "id": "007.1", "text": "Baixar o certificado e colocar na pasta da VPS (Prof. Wendel)", "done": true },
