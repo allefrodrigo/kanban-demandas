@@ -126,7 +126,7 @@
       "id": "011",
       "title": "Banco de Questões › Erro ao importar questões",
       "priority": "alta",
-      "status": "revisao",
+      "status": "concluido",
       "description": "Ao selecionar questões do banco externo e clicar em importar, ocorria 'Erro inesperado ao importar questões'. O campo correct_answer vinha null para questões manuais, causando crash em null.toLowerCase(). Além disso, as alternativas eram importadas com texto vazio pelo mesmo mismatch de campos da visualização, e o mapeamento de disciplina para materiaId sempre caía no fallback padrão.",
       "subtasks": [
         { "id": "011.1", "text": "Derivar correct_answer a partir das alternativas (is_correct) quando o campo é null", "done": true },
