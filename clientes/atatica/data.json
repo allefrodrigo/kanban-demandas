@@ -1,6 +1,6 @@
 {
   "project": "Kanban",
-  "lastUpdated": "2026-03-21T12:30",
+  "lastUpdated": "2026-03-22T06:15",
   "whatsapp": "5584997069841",
   "columns": ["backlog", "analise", "andamento", "revisao", "concluido"],
   "demands": [
@@ -20,11 +20,11 @@
       "id": "002",
       "title": "Simulados",
       "priority": "alta",
-      "status": "backlog",
+      "status": "andamento",
       "description": "Alunos relatam dificuldade para visualizar o simulado semanal na tela, só conseguindo encontrar o botão 'clique aqui para iniciar' ao diminuir o zoom manualmente. O aluno também consegue ver informações de disponibilidade para outros planos e instituições, poluindo a interface e aumentando o card desnecessariamente. A ordenação atual não favorece a sequência pedagógica desejada, fazendo com que alguns alunos realizem simulados mais recentes antes dos anteriores.",
       "subtasks": [
-        { "id": "002.1", "text": "Corrigir layout e responsividade do card para que o botão de início fique visível sem alterar zoom", "done": false },
-        { "id": "002.2", "text": "Exibir apenas simulados compatíveis com o plano do aluno, sem listar instituições ou planos no card", "done": false },
+        { "id": "002.1", "text": "Corrigir layout e responsividade do card para que o botão de início fique visível sem alterar zoom", "done": true },
+        { "id": "002.2", "text": "Exibir apenas simulados compatíveis com o plano do aluno, sem listar instituições ou planos no card", "done": true },
         { "id": "002.3", "text": "Ordenação padrão: não realizados primeiro, por semana crescente, ordem pedagógica do ADM dentro da semana (ex: Semana 01 Mat → Ling → Hum → Nat, depois Semana 02)", "done": false },
         { "id": "002.4", "text": "Manter botão 'ordenar por' disponível para o aluno reorganizar manualmente", "done": false }
       ]
