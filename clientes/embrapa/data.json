@@ -1,6 +1,6 @@
 {
   "project": "Kanban",
-  "lastUpdated": "2026-03-20T10:43",
+  "lastUpdated": "2026-03-24T00:00",
   "whatsapp": "5500000000000",
   "columns": ["backlog", "analise", "andamento", "revisao", "concluido"],
   "demands": [
@@ -70,12 +70,12 @@
       "id": "006",
       "title": "Trocar Provedor de E-mail",
       "priority": "alta",
-      "status": "backlog",
+      "status": "revisao",
       "description": "O domínio anterior utilizado para o serviço de e-mail não foi renovado, deixando o envio de e-mails inoperante. É necessário migrar para um provedor de e-mail vinculado ao domínio oficial do cliente, garantindo a continuidade das comunicações da plataforma.",
       "subtasks": [
         { "id": "006.1", "text": "Falar com o responsável para alinhar domínio e provedor de e-mail a ser utilizado", "done": true },
-        { "id": "006.2", "text": "Avaliar soluções de provedor de e-mail compatíveis com o domínio oficial do cliente", "done": false },
-        { "id": "006.3", "text": "Implementar a configuração do novo provedor de e-mail na aplicação", "done": false }
+        { "id": "006.2", "text": "Avaliar soluções de provedor de e-mail compatíveis com o domínio oficial do cliente", "done": true },
+        { "id": "006.3", "text": "Implementar a configuração do novo provedor de e-mail na aplicação", "done": true }
       ]
     }
   ]
