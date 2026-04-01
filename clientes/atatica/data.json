@@ -1,6 +1,6 @@
 {
   "project": "Kanban",
-  "lastUpdated": "2026-03-27T20:00",
+  "lastUpdated": "2026-04-01T12:00",
   "whatsapp": "5584997069841",
   "columns": ["backlog", "analise", "andamento", "revisao", "concluido"],
   "demands": [
@@ -145,6 +145,21 @@
         { "id": "012.2", "text": "Substituir Typography por RichTextRenderer nos campos contexto, enunciado, alternativas e explicação do accordion (linha expandida)", "done": true },
         { "id": "012.3", "text": "Substituir Typography por RichTextRenderer nos mesmos campos do dialog de Visualizar Questão", "done": true },
         { "id": "012.4", "text": "Remover seção separada de 'Imagens' (agora renderizadas inline pelo markdown)", "done": true }
+      ]
+    },
+    {
+      "id": "013",
+      "title": "Simulados › Auto-save de respostas na prova",
+      "priority": "alta",
+      "status": "revisao",
+      "description": "Alunos relatavam provas zeradas ao fechar a aba, perder conexão ou quando o tempo acabava sem clicar 'Ok'. As respostas ficavam apenas na memória do navegador (useState) e só eram enviadas ao servidor no clique de 'Finalizar'. Qualquer interrupção causava perda total. Além disso, o backend rejeitava reenvio de respostas já respondidas, impedindo retentativas.",
+      "subtasks": [
+        { "id": "013.1", "text": "Criar endpoint PUT /api/prova/:attemptId/answer com upsert (cria ou atualiza resposta individual)", "done": true },
+        { "id": "013.2", "text": "Alterar submitAnswers para fazer upsert em vez de rejeitar duplicatas com erro 400", "done": true },
+        { "id": "013.3", "text": "Adicionar método saveAnswer no client frontend para salvar resposta individual via PUT", "done": true },
+        { "id": "013.4", "text": "handleAnswerSelect salva cada resposta no servidor em background (fire-and-forget)", "done": true },
+        { "id": "013.5", "text": "Timeout auto-finaliza a prova sem depender de clique do aluno no diálogo", "done": true },
+        { "id": "013.6", "text": "Adicionar beforeunload para avisar o aluno antes de fechar a aba durante prova ativa", "done": true }
       ]
     }
   ]
