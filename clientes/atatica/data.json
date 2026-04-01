@@ -161,6 +161,18 @@
         { "id": "013.5", "text": "Timeout auto-finaliza a prova sem depender de clique do aluno no diálogo", "done": true },
         { "id": "013.6", "text": "Adicionar beforeunload para avisar o aluno antes de fechar a aba durante prova ativa", "done": true }
       ]
+    },
+    {
+      "id": "014",
+      "title": "Usuários › Resultados › Ajustes nos Simulados",
+      "priority": "media",
+      "status": "backlog",
+      "description": "Na tela Usuários > Resultados, faltam informações e filtros importantes para acompanhamento pedagógico dos simulados: não é possível identificar a instituição ou plano do aluno, não há filtro por instituição/plano, e não é registrado o tempo efetivo de realização da prova.",
+      "subtasks": [
+        { "id": "014.1", "text": "Exibir a instituição ou plano do aluno (ex: CSCM, Alvorecer, CDSL) junto ao resultado do simulado", "done": false },
+        { "id": "014.2", "text": "Criar filtro por instituição ou plano para visualizar quais alunos realizaram determinado simulado dentro de cada grupo", "done": false },
+        { "id": "014.3", "text": "Registrar e exibir o tempo efetivo que o aluno permaneceu realizando a prova no resultado do simulado", "done": false }
+      ]
     }
   ]
 }
