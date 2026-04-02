@@ -77,6 +77,25 @@
         { "id": "006.2", "text": "Avaliar soluções de provedor de e-mail compatíveis com o domínio oficial do cliente", "done": true },
         { "id": "006.3", "text": "Implementar a configuração do novo provedor de e-mail na aplicação", "done": true }
       ]
+    },
+    {
+      "id": "007",
+      "title": "Corrigir Envio de Dados Offline (Queue-First)",
+      "priority": "alta",
+      "status": "revisao",
+      "description": "O aplicativo apresentava falhas no envio de dados quando o técnico estava no campo com sinal instável. A conexão oscilando entre 3G/4G/sem sinal causava um ciclo onde o app tentava enviar, falhava, salvava offline e tentava novamente sem parar. A solução implementada adota o modelo queue-first: os dados são sempre salvos localmente primeiro e o envio ao servidor é uma tentativa secundária. Inclui compressão de fotos, debounce de rede, estado parcial no envio, polling automático e feedback visual ao técnico.",
+      "subtasks": [
+        { "id": "007.1", "text": "Criar compressão de fotos via Canvas API com flag desligável (utils/image-utils.ts)", "done": true },
+        { "id": "007.2", "text": "Redesenhar queue offline com estado por item: pending, photo_uploaded, completed, error (utils/offline-data-utils.ts)", "done": true },
+        { "id": "007.3", "text": "Relaxar threshold de rede para permitir 3G e adicionar debounce de 5s nos eventos de conexão", "done": true },
+        { "id": "007.4", "text": "Implementar envio inteligente com estado parcial — não re-envia foto se já foi enviada (utils/send-utils.ts)", "done": true },
+        { "id": "007.5", "text": "Criar processador global de queue com polling a cada 3 minutos e listener online debounced (_app.tsx)", "done": true },
+        { "id": "007.6", "text": "Refatorar tela de resultado para salvar no queue antes de tentar enviar, com dialog de duplicata", "done": true },
+        { "id": "007.7", "text": "Adicionar lista de registros pendentes no Menu com status e botão de retry para erros", "done": true },
+        { "id": "007.8", "text": "Implementar cleanup automático de fotos no IndexedDB após envio confirmado", "done": true },
+        { "id": "007.9", "text": "Criar manual de teste para validação pelo técnico de campo (docs/manual-de-teste-offline.md)", "done": true },
+        { "id": "007.10", "text": "Técnico de campo executar os 8 testes do manual e reportar resultados", "done": false }
+      ]
     }
   ]
 }
