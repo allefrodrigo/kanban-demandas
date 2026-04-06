@@ -1,6 +1,6 @@
 {
   "project": "Kanban",
-  "lastUpdated": "2026-03-24T00:00",
+  "lastUpdated": "2026-04-06T00:00",
   "whatsapp": "5500000000000",
   "columns": ["backlog", "analise", "andamento", "revisao", "concluido"],
   "demands": [
@@ -46,31 +46,31 @@
       "id": "004",
       "title": "Atualizar Instruções de Instalação do PWA no iOS",
       "priority": "media",
-      "status": "andamento",
+      "status": "concluido",
       "description": "As instruções de como instalar o PWA no iOS estão desatualizadas. Atualizações recentes do iOS alteraram os ícones e a localização dos botões nos navegadores, tornando o passo a passo atual incorreto para o usuário. É necessário revisar e atualizar o texto e as referências visuais para refletir a interface atual do iOS.",
       "subtasks": [
-        { "id": "004.1", "text": "Identificar as mudanças de ícones e localização nos navegadores do iOS atual", "done": false },
-        { "id": "004.2", "text": "Reescrever o passo a passo de instalação do PWA com as referências visuais corretas", "done": false },
-        { "id": "004.3", "text": "Validar as instruções em dispositivo iOS atualizado", "done": false }
+        { "id": "004.1", "text": "Identificar as mudanças de ícones e localização nos navegadores do iOS atual", "done": true },
+        { "id": "004.2", "text": "Reescrever o passo a passo de instalação do PWA com as referências visuais corretas", "done": true },
+        { "id": "004.3", "text": "Validar as instruções em dispositivo iOS atualizado", "done": true }
       ]
     },
     {
       "id": "005",
       "title": "Ajustar Imagem do Ícone do Aplicativo",
       "priority": "media",
-      "status": "andamento",
+      "status": "concluido",
       "description": "O ícone atual do aplicativo contém texto e fundo branco. A imagem deve ser editada para remover o texto, manter apenas o logo e tornar o fundo transparente, garantindo uma apresentação mais limpa e profissional em todas as plataformas.",
       "subtasks": [
-        { "id": "005.1", "text": "Remover o texto presente na imagem do ícone", "done": false },
-        { "id": "005.2", "text": "Exportar o ícone nos formatos e tamanhos necessários para a aplicação", "done": false },
-        { "id": "005.3", "text": "Substituir o ícone atual e validar a exibição nas plataformas", "done": false }
+        { "id": "005.1", "text": "Remover o texto presente na imagem do ícone", "done": true },
+        { "id": "005.2", "text": "Exportar o ícone nos formatos e tamanhos necessários para a aplicação", "done": true },
+        { "id": "005.3", "text": "Substituir o ícone atual e validar a exibição nas plataformas", "done": true }
       ]
     },
     {
       "id": "006",
       "title": "Trocar Provedor de E-mail",
       "priority": "alta",
-      "status": "revisao",
+      "status": "concluido",
       "description": "O domínio anterior utilizado para o serviço de e-mail não foi renovado, deixando o envio de e-mails inoperante. É necessário migrar para um provedor de e-mail vinculado ao domínio oficial do cliente, garantindo a continuidade das comunicações da plataforma.",
       "subtasks": [
         { "id": "006.1", "text": "Falar com o responsável para alinhar domínio e provedor de e-mail a ser utilizado", "done": true },
@@ -82,7 +82,7 @@
       "id": "007",
       "title": "Corrigir Envio de Dados Offline (Queue-First)",
       "priority": "alta",
-      "status": "revisao",
+      "status": "concluido",
       "description": "O aplicativo apresentava falhas no envio de dados quando o técnico estava no campo com sinal instável. A conexão oscilando entre 3G/4G/sem sinal causava um ciclo onde o app tentava enviar, falhava, salvava offline e tentava novamente sem parar. A solução implementada adota o modelo queue-first: os dados são sempre salvos localmente primeiro e o envio ao servidor é uma tentativa secundária. Inclui compressão de fotos, debounce de rede, estado parcial no envio, polling automático e feedback visual ao técnico.",
       "subtasks": [
         { "id": "007.1", "text": "Criar compressão de fotos via Canvas API com flag desligável (utils/image-utils.ts)", "done": true },
@@ -94,7 +94,7 @@
         { "id": "007.7", "text": "Adicionar lista de registros pendentes no Menu com status e botão de retry para erros", "done": true },
         { "id": "007.8", "text": "Implementar cleanup automático de fotos no IndexedDB após envio confirmado", "done": true },
         { "id": "007.9", "text": "Criar manual de teste para validação pelo técnico de campo (docs/manual-de-teste-offline.md)", "done": true },
-        { "id": "007.10", "text": "Técnico de campo executar os 8 testes do manual e reportar resultados", "done": false }
+        { "id": "007.10", "text": "Técnico de campo executar os 8 testes do manual e reportar resultados", "done": true }
       ]
     }
   ]
