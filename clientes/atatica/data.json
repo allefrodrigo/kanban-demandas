@@ -151,7 +151,7 @@
       "id": "013",
       "title": "Simulados › Auto-save de respostas na prova",
       "priority": "alta",
-      "status": "revisao",
+      "status": "concluido",
       "description": "Alunos relatavam provas zeradas ao fechar a aba, perder conexão ou quando o tempo acabava sem clicar 'Ok'. As respostas ficavam apenas na memória do navegador (useState) e só eram enviadas ao servidor no clique de 'Finalizar'. Qualquer interrupção causava perda total. Além disso, o backend rejeitava reenvio de respostas já respondidas, impedindo retentativas.",
       "subtasks": [
         { "id": "013.1", "text": "Criar endpoint PUT /api/prova/:attemptId/answer com upsert (cria ou atualiza resposta individual)", "done": true },
