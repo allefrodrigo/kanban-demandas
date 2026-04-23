@@ -1,6 +1,6 @@
 {
   "project": "Kanban",
-  "lastUpdated": "2026-04-01T12:00",
+  "lastUpdated": "2026-04-23T12:00",
   "whatsapp": "5584997069841",
   "columns": [
     "backlog",
@@ -353,6 +353,93 @@
         {
           "id": "014.3",
           "text": "Registrar e exibir o tempo efetivo que o aluno permaneceu realizando a prova no resultado do simulado",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "015",
+      "title": "Módulos de Leitura (Espelhamento da Visão do Aluno)",
+      "priority": "media",
+      "status": "backlog",
+      "description": "O professor deverá ter acesso de visualização aos seguintes dados dentro do perfil de cada aluno selecionado, espelhando a visão do próprio aluno.",
+      "subtasks": [
+        {
+          "id": "015.1",
+          "text": "Simulados Externos: visualizar o desempenho do aluno em simulados externos cadastrados por ele",
+          "done": false
+        },
+        {
+          "id": "015.2",
+          "text": "Métricas: visualizar todas as métricas do aluno — concluídas, com atraso, ativas, total de metas e semanas cumpridas; incluir 'Progresso e Análise' e 'Quem Sou' para compreender o perfil",
+          "done": false
+        },
+        {
+          "id": "015.3",
+          "text": "Caderno de Erros: visualizar todos os erros cometidos pelo aluno, com filtros por disciplina e conteúdo",
+          "done": false
+        },
+        {
+          "id": "015.4",
+          "text": "Meu Desempenho: acompanhar o desempenho do aluno no banco de questões e nos simulados especiais",
+          "done": false
+        },
+        {
+          "id": "015.5",
+          "text": "Aulas: acompanhar quais aulas o aluno assistiu e o percentual assistido",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "016",
+      "title": "Módulos de Gestão e Edição (Ação do Professor)",
+      "priority": "media",
+      "status": "backlog",
+      "description": "O professor deverá realizar edição em áreas específicas para gerenciar a jornada do aluno, incluindo cronograma, metas, plano de estudos e cadastro de notas oficiais TRI dos simulados presenciais.",
+      "subtasks": [
+        {
+          "id": "016.1",
+          "text": "Meus Estudos › Cronograma: visualizar e editar o cronograma do aluno",
+          "done": false
+        },
+        {
+          "id": "016.2",
+          "text": "Meus Estudos › Metas: visualizar as metas do aluno e poder atribuí-las",
+          "done": false
+        },
+        {
+          "id": "016.3",
+          "text": "Meus Estudos › Plano de Estudos: visualizar e acompanhar o percentual de conteúdos e disciplinas já concluídos pelo aluno",
+          "done": false
+        },
+        {
+          "id": "016.4",
+          "text": "Cadastro de Notas Oficiais (TRI): criar espaço para o professor cadastrar a nota TRI dos simulados oficiais presenciais por aluno",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "017",
+      "title": "Vincular Professor a Múltiplas Instituições",
+      "priority": "alta",
+      "status": "backlog",
+      "description": "Atualmente um professor só pode estar vinculado a uma instituição. É necessário permitir que um mesmo professor tenha alunos em instituições diferentes (x, y, z) e, ao mesmo tempo, garantir que ele tenha acesso apenas aos dados dos alunos da(s) sua(s) instituição(ões).",
+      "subtasks": [
+        {
+          "id": "017.1",
+          "text": "Permitir vincular um professor a mais de uma instituição no cadastro",
+          "done": false
+        },
+        {
+          "id": "017.2",
+          "text": "Garantir segregação de acesso: professor só visualiza dados de alunos das instituições às quais está vinculado",
+          "done": false
+        },
+        {
+          "id": "017.3",
+          "text": "Ajustar listagens e filtros (alunos, turmas, resultados) para respeitar o escopo multi-institucional do professor",
           "done": false
         }
       ]
