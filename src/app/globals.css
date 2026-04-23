@@ -26,6 +26,7 @@
   --col-andamento: #c2620a;
   --col-revisao:   #7c3aed;
   --col-concluido: #16a34a;
+  --col-resolvido: #64748b;
 
   --priority-alta:  #f85149;
   --priority-media: #d29922;
@@ -58,6 +59,7 @@
   --col-andamento: #c2620a;
   --col-revisao:   #7c3aed;
   --col-concluido: #16a34a;
+  --col-resolvido: #8893a2;
 
   --priority-alta:  #dc3545;
   --priority-media: #c08a00;
@@ -214,6 +216,7 @@ body {
   gap: 16px;
   min-width: calc(var(--col-min-width) * 5 + 16px * 4);
   align-items: start;
+  transition: grid-template-columns 0.25s ease;
 }
 
 /* ─── Column ──────────────────────────────────────────────── */
@@ -223,6 +226,41 @@ body {
   display: flex;
   flex-direction: column;
   animation: col-enter 0.4s ease both;
+  overflow: hidden;
+}
+
+.kanban-col.collapsed {
+  min-width: 0;
+  width: 48px;
+}
+
+.kanban-col.collapsible .col-header {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.kanban-col.collapsible .col-header:hover {
+  background: var(--border);
+}
+
+.kanban-col.collapsed .col-header {
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 6px;
+  height: 100%;
+  justify-content: flex-start;
+  border-bottom: none;
+  border-right: 1px solid var(--border);
+}
+
+.kanban-col.collapsed .col-title {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+}
+
+.kanban-col.collapsed .col-count {
+  margin-top: 0;
 }
 
 .kanban-col + .kanban-col {
@@ -257,6 +295,18 @@ body {
   justify-content: space-between;
   padding: 12px 16px;
   border-bottom: 1px solid var(--border);
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+}
+
+.col-header:disabled {
+  cursor: default;
 }
 
 .col-title {

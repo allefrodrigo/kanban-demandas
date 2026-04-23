@@ -25,12 +25,13 @@ interface ProjectData {
   whatsapp?: string;
 }
 
-const COLUMN_CONFIG: Record<string, { label: string; color: string }> = {
+const COLUMN_CONFIG: Record<string, { label: string; color: string; collapsible?: boolean }> = {
   backlog:   { label: 'Backlog',                color: 'var(--col-backlog)' },
   analise:   { label: 'Em Análise',             color: 'var(--col-analise)' },
   andamento: { label: 'Trabalhando no Momento', color: 'var(--col-andamento)' },
   revisao:   { label: 'Em Revisão',             color: 'var(--col-revisao)' },
   concluido: { label: 'Concluído',              color: 'var(--col-concluido)' },
+  resolvido: { label: 'Resolvido',              color: 'var(--col-resolvido)', collapsible: true },
 };
 
 const PRIORITY_CONFIG: Record<string, { label: string; cssVar: string }> = {
@@ -51,6 +52,9 @@ export default function KanbanApp({ data }: { data: ProjectData }) {
   const [theme, setTheme] = useState('dark');
   const [dialogOpen, setDialogOpen] = useState(false);
   const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
+  const [collapsedCols, setCollapsedCols] = useState<Set<string>>(
+    () => new Set(data.columns.filter(id => COLUMN_CONFIG[id]?.collapsible))
+  );
 
   useEffect(() => {
     const saved = document.documentElement.getAttribute('data-theme') || localStorage.getItem('theme') || 'dark';
@@ -62,6 +66,15 @@ export default function KanbanApp({ data }: { data: ProjectData }) {
     setTheme(next);
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
+  };
+
+  const toggleCol = (id: string) => {
+    setCollapsedCols(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
   };
 
   const toggleCard = (id: string) => {
@@ -115,25 +128,43 @@ export default function KanbanApp({ data }: { data: ProjectData }) {
 
       {/* Board */}
       <main className="board-wrapper">
-        <div className="kanban-grid" role="list" aria-label="Quadro de demandas">
+        <div
+          className="kanban-grid"
+          role="list"
+          aria-label="Quadro de demandas"
+          style={{
+            gridTemplateColumns: data.columns
+              .map(id => (collapsedCols.has(id) ? '48px' : 'minmax(var(--col-min-width), 1fr)'))
+              .join(' '),
+            minWidth: 'auto',
+          }}
+        >
           {data.columns.map(colId => {
             const config = COLUMN_CONFIG[colId] || { label: colId, color: '#4a5568' };
             const demands = grouped[colId] || [];
+            const isCollapsed = collapsedCols.has(colId);
+            const isCollapsible = !!config.collapsible;
             return (
               <div
                 key={colId}
-                className="kanban-col"
+                className={`kanban-col${isCollapsed ? ' collapsed' : ''}${isCollapsible ? ' collapsible' : ''}`}
                 style={{ '--col-color': config.color } as React.CSSProperties}
                 role="listitem"
                 aria-label={`Coluna: ${config.label}`}
               >
-                <div className="col-header">
+                <button
+                  type="button"
+                  className="col-header"
+                  onClick={() => isCollapsible && toggleCol(colId)}
+                  aria-expanded={isCollapsible ? !isCollapsed : undefined}
+                  disabled={!isCollapsible}
+                >
                   <span className="col-title">{config.label}</span>
                   <span className="col-count" aria-label={`${demands.length} demandas`}>
                     {demands.length}
                   </span>
-                </div>
-                <div className="col-cards">
+                </button>
+                {!isCollapsed && <div className="col-cards">
                   {demands.length === 0 && (
                     <div className="col-empty">Nenhuma demanda</div>
                   )}
@@ -206,7 +237,7 @@ export default function KanbanApp({ data }: { data: ProjectData }) {
                       </article>
                     );
                   })}
-                </div>
+                </div>}
               </div>
             );
           })}

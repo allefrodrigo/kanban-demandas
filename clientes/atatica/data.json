@@ -2,18 +2,37 @@
   "project": "Kanban",
   "lastUpdated": "2026-04-01T12:00",
   "whatsapp": "5584997069841",
-  "columns": ["backlog", "analise", "andamento", "revisao", "concluido"],
+  "columns": [
+    "backlog",
+    "analise",
+    "andamento",
+    "revisao",
+    "concluido",
+    "resolvido"
+  ],
   "demands": [
     {
       "id": "001",
       "title": "Prova Aleatória",
       "priority": "alta",
-      "status": "concluido",
+      "status": "resolvido",
       "description": "A regra atual não permite escolher livremente questões apenas do banco interno ou apenas do banco externo. Além disso, como os alunos realizarão simulados ENEM dentro da plataforma, permitir acesso irrestrito ao banco interno pode fazer com que visualizem antecipadamente questões que farão parte dos simulados. A funcionalidade deve permitir montar a prova aleatória com maior liberdade de escolha entre os bancos.",
       "subtasks": [
-        { "id": "001.1", "text": "Permitir escolha de somente questões do banco interno (com regra de proteção às questões dos simulados ENEM)", "done": true },
-        { "id": "001.2", "text": "Permitir escolha de somente questões do banco externo", "done": true },
-        { "id": "001.3", "text": "Permitir combinação entre os dois bancos", "done": true }
+        {
+          "id": "001.1",
+          "text": "Permitir escolha de somente questões do banco interno (com regra de proteção às questões dos simulados ENEM)",
+          "done": true
+        },
+        {
+          "id": "001.2",
+          "text": "Permitir escolha de somente questões do banco externo",
+          "done": true
+        },
+        {
+          "id": "001.3",
+          "text": "Permitir combinação entre os dois bancos",
+          "done": true
+        }
       ]
     },
     {
@@ -23,10 +42,26 @@
       "status": "andamento",
       "description": "Alunos relatam dificuldade para visualizar o simulado semanal na tela, só conseguindo encontrar o botão 'clique aqui para iniciar' ao diminuir o zoom manualmente. O aluno também consegue ver informações de disponibilidade para outros planos e instituições, poluindo a interface e aumentando o card desnecessariamente. A ordenação atual não favorece a sequência pedagógica desejada, fazendo com que alguns alunos realizem simulados mais recentes antes dos anteriores.",
       "subtasks": [
-        { "id": "002.1", "text": "Corrigir layout e responsividade do card para que o botão de início fique visível sem alterar zoom", "done": true },
-        { "id": "002.2", "text": "Exibir apenas simulados compatíveis com o plano do aluno, sem listar instituições ou planos no card", "done": true },
-        { "id": "002.3", "text": "Ordenação padrão: não realizados primeiro, por semana crescente, ordem pedagógica do ADM dentro da semana (ex: Semana 01 Mat → Ling → Hum → Nat, depois Semana 02)", "done": false },
-        { "id": "002.4", "text": "Manter botão 'ordenar por' disponível para o aluno reorganizar manualmente", "done": false }
+        {
+          "id": "002.1",
+          "text": "Corrigir layout e responsividade do card para que o botão de início fique visível sem alterar zoom",
+          "done": true
+        },
+        {
+          "id": "002.2",
+          "text": "Exibir apenas simulados compatíveis com o plano do aluno, sem listar instituições ou planos no card",
+          "done": true
+        },
+        {
+          "id": "002.3",
+          "text": "Ordenação padrão: não realizados primeiro, por semana crescente, ordem pedagógica do ADM dentro da semana (ex: Semana 01 Mat → Ling → Hum → Nat, depois Semana 02)",
+          "done": false
+        },
+        {
+          "id": "002.4",
+          "text": "Manter botão 'ordenar por' disponível para o aluno reorganizar manualmente",
+          "done": false
+        }
       ]
     },
     {
@@ -36,20 +71,40 @@
       "status": "andamento",
       "description": "Alunos relatam falhas no módulo de cronograma: dificuldade para visualizar corretamente a semana, agenda ou dia; falhas ao salvar tarefas; e sobreposição de tarefas na agenda mesmo quando os horários cadastrados são diferentes.",
       "subtasks": [
-        { "id": "003.1", "text": "Correção da visualização: as visões por semana, dia e agenda devem funcionar corretamente com exibição estável das tarefas cadastradas", "done": false },
-        { "id": "003.2", "text": "Correção no salvamento: ao criar ou editar tarefa, salvar corretamente e exibir de forma imediata e consistente", "done": false },
-        { "id": "003.3", "text": "Correção da sobreposição: tarefas com horários diferentes não devem aparecer sobrepostas; revisar lógica de posicionamento visual para que cada tarefa ocupe seu intervalo correto", "done": false }
+        {
+          "id": "003.1",
+          "text": "Correção da visualização: as visões por semana, dia e agenda devem funcionar corretamente com exibição estável das tarefas cadastradas",
+          "done": false
+        },
+        {
+          "id": "003.2",
+          "text": "Correção no salvamento: ao criar ou editar tarefa, salvar corretamente e exibir de forma imediata e consistente",
+          "done": false
+        },
+        {
+          "id": "003.3",
+          "text": "Correção da sobreposição: tarefas com horários diferentes não devem aparecer sobrepostas; revisar lógica de posicionamento visual para que cada tarefa ocupe seu intervalo correto",
+          "done": false
+        }
       ]
     },
     {
       "id": "004",
       "title": "Simulados Externos › Nota TRI",
       "priority": "media",
-      "status": "concluido",
+      "status": "resolvido",
       "description": "Ao inserir dados de simulado externo, não há campo para registrar a nota TRI. Isso limita a análise pedagógica, pois acertos e taxa de acerto mostram apenas desempenho quantitativo, sem representar o desempenho no modelo ENEM (Teoria de Resposta ao Item). Nem todos os simulados externos disponibilizam a nota TRI, então o preenchimento não pode ser obrigatório.",
       "subtasks": [
-        { "id": "004.1", "text": "Adicionar campo opcional de nota TRI para cada área do conhecimento do ENEM na tela Simulados Externos › Inserir Dados", "done": true },
-        { "id": "004.2", "text": "Exibir gráfico de linhas com marcadores para acompanhamento do histórico de notas TRI, complementando o gráfico atual de acertos/taxa de acerto", "done": true }
+        {
+          "id": "004.1",
+          "text": "Adicionar campo opcional de nota TRI para cada área do conhecimento do ENEM na tela Simulados Externos › Inserir Dados",
+          "done": true
+        },
+        {
+          "id": "004.2",
+          "text": "Exibir gráfico de linhas com marcadores para acompanhamento do histórico de notas TRI, complementando o gráfico atual de acertos/taxa de acerto",
+          "done": true
+        }
       ]
     },
     {
@@ -59,21 +114,45 @@
       "status": "backlog",
       "description": "Ao clicar no botão 'Aulas' na página inicial, o aluno está sendo direcionado para a lista de planos, quando o esperado seria o acesso direto à lista de aulas do seu plano.",
       "subtasks": [
-        { "id": "005.1", "text": "Se o aluno possui apenas um plano ativo, direcionar direto para a lista de aulas", "done": false },
-        { "id": "005.2", "text": "Se houver mais de um plano vinculado, solicitar seleção do plano antes de exibir as aulas", "done": false }
+        {
+          "id": "005.1",
+          "text": "Se o aluno possui apenas um plano ativo, direcionar direto para a lista de aulas",
+          "done": false
+        },
+        {
+          "id": "005.2",
+          "text": "Se houver mais de um plano vinculado, solicitar seleção do plano antes de exibir as aulas",
+          "done": false
+        }
       ]
     },
     {
       "id": "006",
       "title": "Cadastro de Alunos › Série e Universidade",
       "priority": "alta",
-      "status": "concluido",
+      "status": "resolvido",
       "description": "Alunos do 9º ano não conseguem finalizar o cadastro porque o campo 'série' é obrigatório e não possui a opção correspondente. Além disso, o campo 'universidade' deve permitir que o aluno indique que ainda não sabe qual universidade deseja, sem bloquear o cadastro.",
       "subtasks": [
-        { "id": "006.1", "text": "Adicionar a opção '9º ano' no campo de seleção de série para que alunos do ensino fundamental possam concluir o cadastro", "done": true },
-        { "id": "006.2", "text": "Adicionar checkbox abaixo do input de universidade com o texto 'Não sei ainda'", "done": true },
-        { "id": "006.3", "text": "Ao marcar o checkbox, desativar o input de universidade (impedir digitação) e preencher automaticamente o valor 'Não sei ainda' no campo", "done": true },
-        { "id": "006.4", "text": "Ao desmarcar o checkbox, reativar o input de universidade e limpar o valor preenchido automaticamente", "done": true }
+        {
+          "id": "006.1",
+          "text": "Adicionar a opção '9º ano' no campo de seleção de série para que alunos do ensino fundamental possam concluir o cadastro",
+          "done": true
+        },
+        {
+          "id": "006.2",
+          "text": "Adicionar checkbox abaixo do input de universidade com o texto 'Não sei ainda'",
+          "done": true
+        },
+        {
+          "id": "006.3",
+          "text": "Ao marcar o checkbox, desativar o input de universidade (impedir digitação) e preencher automaticamente o valor 'Não sei ainda' no campo",
+          "done": true
+        },
+        {
+          "id": "006.4",
+          "text": "Ao desmarcar o checkbox, reativar o input de universidade e limpar o valor preenchido automaticamente",
+          "done": true
+        }
       ]
     },
     {
@@ -83,83 +162,175 @@
       "status": "analise",
       "description": "O gateway de pagamento precisa ser configurado na plataforma. Ainda não foi feito o upload do certificado na VPS nem o download do certificado. Após a configuração, será necessário realizar um teste gerando um código Pix e efetuando um pagamento de R$ 0,01 para ativar um plano teste.",
       "subtasks": [
-        { "id": "007.1", "text": "Baixar o certificado e colocar na pasta da VPS (Prof. Wendel)", "done": true },
-        { "id": "007.2", "text": "Baixar o certificado e colocar na pasta da VPS (Prof. Lucas)", "done": true },
-        { "id": "007.3", "text": "Configurar .env com client_id do EfiPay (Prof. Wendel)", "done": true },
-        { "id": "007.4", "text": "Configurar .env com client_id do EfiPay (Prof. Lucas)", "done": true },
-        { "id": "007.5", "text": "Realizar teste de geração de código Pix e pagamento de R$ 0,01 (Prof. Wendel)", "done": false },
-        { "id": "007.6", "text": "Realizar teste de geração de código Pix e pagamento de R$ 0,01 (Prof. Lucas)", "done": false }
+        {
+          "id": "007.1",
+          "text": "Baixar o certificado e colocar na pasta da VPS (Prof. Wendel)",
+          "done": true
+        },
+        {
+          "id": "007.2",
+          "text": "Baixar o certificado e colocar na pasta da VPS (Prof. Lucas)",
+          "done": true
+        },
+        {
+          "id": "007.3",
+          "text": "Configurar .env com client_id do EfiPay (Prof. Wendel)",
+          "done": true
+        },
+        {
+          "id": "007.4",
+          "text": "Configurar .env com client_id do EfiPay (Prof. Lucas)",
+          "done": true
+        },
+        {
+          "id": "007.5",
+          "text": "Realizar teste de geração de código Pix e pagamento de R$ 0,01 (Prof. Wendel)",
+          "done": false
+        },
+        {
+          "id": "007.6",
+          "text": "Realizar teste de geração de código Pix e pagamento de R$ 0,01 (Prof. Lucas)",
+          "done": false
+        }
       ]
     },
     {
       "id": "008",
       "title": "Atribuir Domínio atatica.com.br",
       "priority": "media",
-      "status": "concluido",
+      "status": "resolvido",
       "description": "Migrar o projeto do domínio atual (https://atatica.plataformaestudos.online/) para o domínio definitivo atatica.com.br.",
       "subtasks": [
-        { "id": "008.1", "text": "Configurar DNS para o domínio atatica.com.br", "done": true }
+        {
+          "id": "008.1",
+          "text": "Configurar DNS para o domínio atatica.com.br",
+          "done": true
+        }
       ]
     },
     {
       "id": "009",
       "title": "<Select.Item /> has an empty string value",
       "priority": "alta",
-      "status": "concluido",
+      "status": "resolvido",
       "description": "Erro no componente <Select.Item /> do Radix UI ao receber value vazio (\"\"). As queries SQL (getExamSources, getSourceTypes, getLanguages, getAreas) filtravam valores NULL mas não strings vazias (''). Quando uma questão possuía string vazia nessas colunas, o valor era retornado e renderizado como <SelectItem value=\"\">, que o Radix UI rejeita.",
       "subtasks": [
-        { "id": "009.1", "text": "Filtrar strings vazias ('') nas queries getExamSources, getSourceTypes, getLanguages e getAreas", "done": true }
+        {
+          "id": "009.1",
+          "text": "Filtrar strings vazias ('') nas queries getExamSources, getSourceTypes, getLanguages e getAreas",
+          "done": true
+        }
       ]
     },
     {
       "id": "010",
       "title": "Banco de Questões › Visualização sem alternativas",
       "priority": "revisao",
-      "status": "concluido",
+      "status": "resolvido",
       "description": "Ao clicar em visualizar uma questão do banco externo, o enunciado aparecia mas as alternativas ficavam vazias e a resposta correta não era destacada. A API retorna os campos 'content' e 'is_correct' (snake_case), mas o frontend esperava 'text' e 'isCorrect' (camelCase). O mesmo ocorria com o campo 'area' vs 'discipline', impedindo a exibição do chip de disciplina.",
       "subtasks": [
-        { "id": "010.1", "text": "Criar função mapQuestion() no client que normaliza campos da API (content→text, is_correct→isCorrect, area→discipline)", "done": true },
-        { "id": "010.2", "text": "Aplicar mapeamento em getAllQuestions() e getQuestionById()", "done": true }
+        {
+          "id": "010.1",
+          "text": "Criar função mapQuestion() no client que normaliza campos da API (content→text, is_correct→isCorrect, area→discipline)",
+          "done": true
+        },
+        {
+          "id": "010.2",
+          "text": "Aplicar mapeamento em getAllQuestions() e getQuestionById()",
+          "done": true
+        }
       ]
     },
     {
       "id": "011",
       "title": "Banco de Questões › Erro ao importar questões",
       "priority": "alta",
-      "status": "concluido",
+      "status": "resolvido",
       "description": "Ao selecionar questões do banco externo e clicar em importar, ocorria 'Erro inesperado ao importar questões'. O campo correct_answer vinha null para questões manuais, causando crash em null.toLowerCase(). Além disso, as alternativas eram importadas com texto vazio pelo mesmo mismatch de campos da visualização, e o mapeamento de disciplina para materiaId sempre caía no fallback padrão.",
       "subtasks": [
-        { "id": "011.1", "text": "Derivar correct_answer a partir das alternativas (is_correct) quando o campo é null", "done": true },
-        { "id": "011.2", "text": "Adicionar fallback alt.content no transformToLocalFormat para texto das alternativas", "done": true },
-        { "id": "011.3", "text": "Adicionar fallback campo 'area' no mapeamento disciplina→materiaId", "done": true }
+        {
+          "id": "011.1",
+          "text": "Derivar correct_answer a partir das alternativas (is_correct) quando o campo é null",
+          "done": true
+        },
+        {
+          "id": "011.2",
+          "text": "Adicionar fallback alt.content no transformToLocalFormat para texto das alternativas",
+          "done": true
+        },
+        {
+          "id": "011.3",
+          "text": "Adicionar fallback campo 'area' no mapeamento disciplina→materiaId",
+          "done": true
+        }
       ]
     },
     {
       "id": "012",
       "title": "Banco de Questões › Preview sem renderização Markdown",
       "priority": "media",
-      "status": "concluido",
+      "status": "resolvido",
       "description": "Na tela /student/question/banco-questoes, o preview de questões (accordion e dialog 'Visualizar Questão') exibia conteúdo markdown como texto puro. Imagens (![alt](url)), negrito (**texto**), itálico (*texto*) e quebras de linha não eram renderizados. O componente RichTextRenderer já existia mas não era usado nessa página, e não suportava negrito/itálico.",
       "subtasks": [
-        { "id": "012.1", "text": "Adicionar processamento de negrito (**texto** → <strong>) e itálico (*texto* → <em>) no RichTextRenderer", "done": true },
-        { "id": "012.2", "text": "Substituir Typography por RichTextRenderer nos campos contexto, enunciado, alternativas e explicação do accordion (linha expandida)", "done": true },
-        { "id": "012.3", "text": "Substituir Typography por RichTextRenderer nos mesmos campos do dialog de Visualizar Questão", "done": true },
-        { "id": "012.4", "text": "Remover seção separada de 'Imagens' (agora renderizadas inline pelo markdown)", "done": true }
+        {
+          "id": "012.1",
+          "text": "Adicionar processamento de negrito (**texto** → <strong>) e itálico (*texto* → <em>) no RichTextRenderer",
+          "done": true
+        },
+        {
+          "id": "012.2",
+          "text": "Substituir Typography por RichTextRenderer nos campos contexto, enunciado, alternativas e explicação do accordion (linha expandida)",
+          "done": true
+        },
+        {
+          "id": "012.3",
+          "text": "Substituir Typography por RichTextRenderer nos mesmos campos do dialog de Visualizar Questão",
+          "done": true
+        },
+        {
+          "id": "012.4",
+          "text": "Remover seção separada de 'Imagens' (agora renderizadas inline pelo markdown)",
+          "done": true
+        }
       ]
     },
     {
       "id": "013",
       "title": "Simulados › Auto-save de respostas na prova",
       "priority": "alta",
-      "status": "concluido",
+      "status": "resolvido",
       "description": "Alunos relatavam provas zeradas ao fechar a aba, perder conexão ou quando o tempo acabava sem clicar 'Ok'. As respostas ficavam apenas na memória do navegador (useState) e só eram enviadas ao servidor no clique de 'Finalizar'. Qualquer interrupção causava perda total. Além disso, o backend rejeitava reenvio de respostas já respondidas, impedindo retentativas.",
       "subtasks": [
-        { "id": "013.1", "text": "Criar endpoint PUT /api/prova/:attemptId/answer com upsert (cria ou atualiza resposta individual)", "done": true },
-        { "id": "013.2", "text": "Alterar submitAnswers para fazer upsert em vez de rejeitar duplicatas com erro 400", "done": true },
-        { "id": "013.3", "text": "Adicionar método saveAnswer no client frontend para salvar resposta individual via PUT", "done": true },
-        { "id": "013.4", "text": "handleAnswerSelect salva cada resposta no servidor em background (fire-and-forget)", "done": true },
-        { "id": "013.5", "text": "Timeout auto-finaliza a prova sem depender de clique do aluno no diálogo", "done": true },
-        { "id": "013.6", "text": "Adicionar beforeunload para avisar o aluno antes de fechar a aba durante prova ativa", "done": true }
+        {
+          "id": "013.1",
+          "text": "Criar endpoint PUT /api/prova/:attemptId/answer com upsert (cria ou atualiza resposta individual)",
+          "done": true
+        },
+        {
+          "id": "013.2",
+          "text": "Alterar submitAnswers para fazer upsert em vez de rejeitar duplicatas com erro 400",
+          "done": true
+        },
+        {
+          "id": "013.3",
+          "text": "Adicionar método saveAnswer no client frontend para salvar resposta individual via PUT",
+          "done": true
+        },
+        {
+          "id": "013.4",
+          "text": "handleAnswerSelect salva cada resposta no servidor em background (fire-and-forget)",
+          "done": true
+        },
+        {
+          "id": "013.5",
+          "text": "Timeout auto-finaliza a prova sem depender de clique do aluno no diálogo",
+          "done": true
+        },
+        {
+          "id": "013.6",
+          "text": "Adicionar beforeunload para avisar o aluno antes de fechar a aba durante prova ativa",
+          "done": true
+        }
       ]
     },
     {
@@ -169,9 +340,21 @@
       "status": "backlog",
       "description": "Na tela Usuários > Resultados, faltam informações e filtros importantes para acompanhamento pedagógico dos simulados: não é possível identificar a instituição ou plano do aluno, não há filtro por instituição/plano, e não é registrado o tempo efetivo de realização da prova.",
       "subtasks": [
-        { "id": "014.1", "text": "Exibir a instituição ou plano do aluno (ex: CSCM, Alvorecer, CDSL) junto ao resultado do simulado", "done": false },
-        { "id": "014.2", "text": "Criar filtro por instituição ou plano para visualizar quais alunos realizaram determinado simulado dentro de cada grupo", "done": false },
-        { "id": "014.3", "text": "Registrar e exibir o tempo efetivo que o aluno permaneceu realizando a prova no resultado do simulado", "done": false }
+        {
+          "id": "014.1",
+          "text": "Exibir a instituição ou plano do aluno (ex: CSCM, Alvorecer, CDSL) junto ao resultado do simulado",
+          "done": false
+        },
+        {
+          "id": "014.2",
+          "text": "Criar filtro por instituição ou plano para visualizar quais alunos realizaram determinado simulado dentro de cada grupo",
+          "done": false
+        },
+        {
+          "id": "014.3",
+          "text": "Registrar e exibir o tempo efetivo que o aluno permaneceu realizando a prova no resultado do simulado",
+          "done": false
+        }
       ]
     }
   ]
