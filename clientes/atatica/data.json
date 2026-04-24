@@ -361,7 +361,7 @@
       "id": "015",
       "title": "Módulos de Leitura (Espelhamento da Visão do Aluno)",
       "priority": "media",
-      "status": "backlog",
+      "status": "revisao",
       "description": "O professor deverá ter acesso de visualização aos seguintes dados dentro do perfil de cada aluno selecionado, espelhando a visão do próprio aluno.",
       "subtasks": [
         {
@@ -395,7 +395,7 @@
       "id": "016",
       "title": "Módulos de Gestão e Edição (Ação do Professor)",
       "priority": "media",
-      "status": "backlog",
+      "status": "revisao",
       "description": "O professor deverá realizar edição em áreas específicas para gerenciar a jornada do aluno, incluindo cronograma, metas, plano de estudos e cadastro de notas oficiais TRI dos simulados presenciais.",
       "subtasks": [
         {
@@ -424,7 +424,7 @@
       "id": "017",
       "title": "Vincular Professor a Múltiplas Instituições",
       "priority": "alta",
-      "status": "backlog",
+      "status": "revisao",
       "description": "Atualmente um professor só pode estar vinculado a uma instituição. É necessário permitir que um mesmo professor tenha alunos em instituições diferentes (x, y, z) e, ao mesmo tempo, garantir que ele tenha acesso apenas aos dados dos alunos da(s) sua(s) instituição(ões).",
       "subtasks": [
         {
