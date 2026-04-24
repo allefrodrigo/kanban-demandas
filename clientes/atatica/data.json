@@ -367,27 +367,27 @@
         {
           "id": "015.1",
           "text": "Simulados Externos: visualizar o desempenho do aluno em simulados externos cadastrados por ele",
-          "done": false
+          "done": true
         },
         {
           "id": "015.2",
           "text": "Métricas: visualizar todas as métricas do aluno — concluídas, com atraso, ativas, total de metas e semanas cumpridas; incluir 'Progresso e Análise' e 'Quem Sou' para compreender o perfil",
-          "done": false
+          "done": true
         },
         {
           "id": "015.3",
           "text": "Caderno de Erros: visualizar todos os erros cometidos pelo aluno, com filtros por disciplina e conteúdo",
-          "done": false
+          "done": true
         },
         {
           "id": "015.4",
           "text": "Meu Desempenho: acompanhar o desempenho do aluno no banco de questões e nos simulados especiais",
-          "done": false
+          "done": true
         },
         {
           "id": "015.5",
           "text": "Aulas: acompanhar quais aulas o aluno assistiu e o percentual assistido",
-          "done": false
+          "done": true
         }
       ]
     },
@@ -401,22 +401,22 @@
         {
           "id": "016.1",
           "text": "Meus Estudos › Cronograma: visualizar e editar o cronograma do aluno",
-          "done": false
+          "done": true
         },
         {
           "id": "016.2",
           "text": "Meus Estudos › Metas: visualizar as metas do aluno e poder atribuí-las",
-          "done": false
+          "done": true
         },
         {
           "id": "016.3",
           "text": "Meus Estudos › Plano de Estudos: visualizar e acompanhar o percentual de conteúdos e disciplinas já concluídos pelo aluno",
-          "done": false
+          "done": true
         },
         {
           "id": "016.4",
           "text": "Cadastro de Notas Oficiais (TRI): criar espaço para o professor cadastrar a nota TRI dos simulados oficiais presenciais por aluno",
-          "done": false
+          "done": true
         }
       ]
     },
@@ -430,17 +430,17 @@
         {
           "id": "017.1",
           "text": "Permitir vincular um professor a mais de uma instituição no cadastro",
-          "done": false
+          "done": true
         },
         {
           "id": "017.2",
           "text": "Garantir segregação de acesso: professor só visualiza dados de alunos das instituições às quais está vinculado",
-          "done": false
+          "done": true
         },
         {
           "id": "017.3",
           "text": "Ajustar listagens e filtros (alunos, turmas, resultados) para respeitar o escopo multi-institucional do professor",
-          "done": false
+          "done": true
         }
       ]
     }
