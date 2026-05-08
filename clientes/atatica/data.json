@@ -1,6 +1,6 @@
 {
   "project": "Kanban",
-  "lastUpdated": "2026-05-08T12:00",
+  "lastUpdated": "2026-05-08T14:00",
   "whatsapp": "5584997069841",
   "columns": [
     "backlog",
@@ -440,6 +440,65 @@
         {
           "id": "017.3",
           "text": "Ajustar listagens e filtros (alunos, turmas, resultados) para respeitar o escopo multi-institucional do professor",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "018",
+      "title": "Relatório de Desempenho do Aluno - Programa de Mentoria",
+      "priority": "alta",
+      "status": "resolvido",
+      "description": "Geração de relatório individual do aluno no programa de mentoria A Tática, consolidando engajamento, progresso acadêmico, desempenho em simulados, análise do caderno de erros, parecer do mentor e recomendações. Objetivo: oferecer ao mentor e à coordenação uma visão clara do percurso do aluno, com pontos fortes e oportunidades de melhoria.",
+      "subtasks": [
+        {
+          "id": "018.1",
+          "text": "Informações iniciais: nome do aluno, nome do mentor responsável, % de presença nas mentorias e remarcações de mentoria",
+          "done": true
+        },
+        {
+          "id": "018.2",
+          "text": "Metas: % de metas cumpridas dentro da plataforma e % de metas cumpridas estabelecidas entre mentor e aluno",
+          "done": true
+        },
+        {
+          "id": "018.3",
+          "text": "Engajamento de estudo: total de tempo estudado, % de conteúdos estudados por matéria, dia da semana com maior tempo de estudo e média de horas estudadas por dia",
+          "done": true
+        },
+        {
+          "id": "018.4",
+          "text": "Simulados Externos: acertos gerais e por área de conhecimento, com visualização gráfica",
+          "done": true
+        },
+        {
+          "id": "018.5",
+          "text": "Análise de erros em simulados externos: distribuição por tipo de erro (desatenção, tempo, falta de conteúdo) e por área de conhecimento",
+          "done": true
+        },
+        {
+          "id": "018.6",
+          "text": "Resultado de Simulado Diagnóstico com TRI: proficiência estimada, evolução em relação ao mês anterior e nível de coerência",
+          "done": true
+        },
+        {
+          "id": "018.7",
+          "text": "Caderno de Erros: % de erros separado por disciplina e top 3 conteúdos com mais erros em cada disciplina",
+          "done": true
+        },
+        {
+          "id": "018.8",
+          "text": "Parecer do Mentor: campo para 'Diagnóstico do Mês' e 'Próximas Fronteiras' (foco da próxima quinzena)",
+          "done": true
+        },
+        {
+          "id": "018.9",
+          "text": "Recomendações e Próximos Passos: orientações para o aluno e para a escola/programa com base nos dados e parecer do mentor",
+          "done": true
+        },
+        {
+          "id": "018.10",
+          "text": "Geração automática do relatório consolidado em PDF/visualização web com cabeçalho, rodapé e identidade visual A Tática",
           "done": true
         }
       ]
