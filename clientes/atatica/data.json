@@ -1,6 +1,6 @@
 {
   "project": "Kanban",
-  "lastUpdated": "2026-04-23T12:00",
+  "lastUpdated": "2026-05-08T12:00",
   "whatsapp": "5584997069841",
   "columns": [
     "backlog",
@@ -39,7 +39,7 @@
       "id": "002",
       "title": "Simulados",
       "priority": "alta",
-      "status": "andamento",
+      "status": "backlog",
       "description": "Alunos relatam dificuldade para visualizar o simulado semanal na tela, só conseguindo encontrar o botão 'clique aqui para iniciar' ao diminuir o zoom manualmente. O aluno também consegue ver informações de disponibilidade para outros planos e instituições, poluindo a interface e aumentando o card desnecessariamente. A ordenação atual não favorece a sequência pedagógica desejada, fazendo com que alguns alunos realizem simulados mais recentes antes dos anteriores.",
       "subtasks": [
         {
@@ -68,7 +68,7 @@
       "id": "003",
       "title": "Meus Estudos › Cronograma",
       "priority": "media",
-      "status": "andamento",
+      "status": "backlog",
       "description": "Alunos relatam falhas no módulo de cronograma: dificuldade para visualizar corretamente a semana, agenda ou dia; falhas ao salvar tarefas; e sobreposição de tarefas na agenda mesmo quando os horários cadastrados são diferentes.",
       "subtasks": [
         {
@@ -159,7 +159,7 @@
       "id": "007",
       "title": "Configurar Gateway de Pagamento",
       "priority": "alta",
-      "status": "analise",
+      "status": "andamento",
       "description": "O gateway de pagamento precisa ser configurado na plataforma. Ainda não foi feito o upload do certificado na VPS nem o download do certificado. Após a configuração, será necessário realizar um teste gerando um código Pix e efetuando um pagamento de R$ 0,01 para ativar um plano teste.",
       "subtasks": [
         {
@@ -361,7 +361,7 @@
       "id": "015",
       "title": "Módulos de Leitura (Espelhamento da Visão do Aluno)",
       "priority": "media",
-      "status": "revisao",
+      "status": "resolvido",
       "description": "O professor deverá ter acesso de visualização aos seguintes dados dentro do perfil de cada aluno selecionado, espelhando a visão do próprio aluno.",
       "subtasks": [
         {
@@ -395,7 +395,7 @@
       "id": "016",
       "title": "Módulos de Gestão e Edição (Ação do Professor)",
       "priority": "media",
-      "status": "revisao",
+      "status": "resolvido",
       "description": "O professor deverá realizar edição em áreas específicas para gerenciar a jornada do aluno, incluindo cronograma, metas, plano de estudos e cadastro de notas oficiais TRI dos simulados presenciais.",
       "subtasks": [
         {
