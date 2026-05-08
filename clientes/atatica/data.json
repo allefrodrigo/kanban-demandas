@@ -424,7 +424,7 @@
       "id": "017",
       "title": "Vincular Professor a Múltiplas Instituições",
       "priority": "alta",
-      "status": "revisao",
+      "status": "resolvido",
       "description": "Atualmente um professor só pode estar vinculado a uma instituição. É necessário permitir que um mesmo professor tenha alunos em instituições diferentes (x, y, z) e, ao mesmo tempo, garantir que ele tenha acesso apenas aos dados dos alunos da(s) sua(s) instituição(ões).",
       "subtasks": [
         {
