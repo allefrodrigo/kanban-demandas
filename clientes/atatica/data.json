@@ -1,6 +1,6 @@
 {
   "project": "Kanban",
-  "lastUpdated": "2026-05-08T14:00",
+  "lastUpdated": "2026-05-12T18:00",
   "whatsapp": "5584997069841",
   "columns": [
     "backlog",
@@ -499,6 +499,127 @@
         {
           "id": "018.10",
           "text": "Geração automática do relatório consolidado em PDF/visualização web com cabeçalho, rodapé e identidade visual A Tática",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "019",
+      "title": "Excluir Aluno › Corrigir erro 500 e cobrir todas as FKs",
+      "priority": "alta",
+      "status": "revisao",
+      "description": "Ao tentar excluir um cadastro de aluno duplicado, a plataforma retornava erro 500 e o usuário permanecia no banco. Causa raiz: o controller deleteUserById tentava remover registros das tabelas UserQuestionResponses e UserProvaAttempts filtrando por uma coluna userId que essas tabelas não possuem (são ligadas via UserSimulado). Além disso, outras tabelas com FK para Users (OfficialExamScores, UserInstitutions, MentorStudents, StudyGoals.createdBy/assignedBy, question_reports.reviewedBy, ScheduleEvents.createdBy/updatedBy, pomodoro_sessions.UserId) não eram tratadas, podendo bloquear futuras exclusões.",
+      "subtasks": [
+        {
+          "id": "019.1",
+          "text": "Corrigir cascata UserSimulado → UserProvaAttempt → UserQuestionResponse seguindo as FKs reais ao invés de filtrar por userId inexistente",
+          "done": true
+        },
+        {
+          "id": "019.2",
+          "text": "Deletar registros que pertencem ao próprio usuário: OfficialExamScores (userId), UserInstitutions, MentorStudents (mentorId ou studentId)",
+          "done": true
+        },
+        {
+          "id": "019.3",
+          "text": "SET NULL nas referências em dados de outros usuários: StudyGoals.createdBy/assignedBy, question_reports.reviewedBy, ScheduleEvents.createdBy/updatedBy, pomodoro_sessions.UserId — preserva os dados de terceiros",
+          "done": true
+        },
+        {
+          "id": "019.4",
+          "text": "Bloquear com 409 e mensagem clara quando o usuário é professor responsável por notas oficiais de outros alunos (teacherId é NOT NULL — exclusão destruiria notas alheias)",
+          "done": true
+        },
+        {
+          "id": "019.5",
+          "text": "Manter operação dentro de transação Sequelize: qualquer falha reverte tudo, sem registros órfãos",
+          "done": true
+        },
+        {
+          "id": "019.6",
+          "text": "Validado localmente: alunos atatica.enem@gmail.com e isadoratelesbezerra@gmail.com excluídos com sucesso, mais cenários sintéticos cobrindo todas as FKs",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "020",
+      "title": "Excluir Aluno › Diálogo elaborado de confirmação",
+      "priority": "media",
+      "status": "revisao",
+      "description": "O diálogo atual de exclusão de aluno era genérico (apenas 'Tem certeza?'), sem identificar o aluno alvo nem alertar sobre o impacto. Por se tratar de ação destrutiva e irreversível, o admin precisa enxergar exatamente quem está sendo apagado e confirmar deliberadamente.",
+      "subtasks": [
+        {
+          "id": "020.1",
+          "text": "Mostrar nome, e-mail, plano, papel e status do aluno em destaque dentro do diálogo",
+          "done": true
+        },
+        {
+          "id": "020.2",
+          "text": "Alerta explícito listando o que será apagado (respostas, vídeos, metas, pomodoros, streaks, pagamentos)",
+          "done": true
+        },
+        {
+          "id": "020.3",
+          "text": "Checkbox obrigatório 'Entendo que esta ação é permanente' — botão Excluir só libera quando marcado",
+          "done": true
+        },
+        {
+          "id": "020.4",
+          "text": "Estado de carregamento ('Excluindo...') e bloqueio do botão Cancelar durante a requisição para evitar interrupção no meio",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "021",
+      "title": "Sidebar › Mentoria — renomear 'Meus Mentees' para 'Meus Alunos'",
+      "priority": "baixa",
+      "status": "revisao",
+      "description": "O item da sidebar dentro do grupo Mentoria usava o termo 'Meus Mentees', estrangeirismo pouco familiar para o público. Trocar por 'Meus Alunos' alinha com o vocabulário usado no resto da plataforma.",
+      "subtasks": [
+        {
+          "id": "021.1",
+          "text": "Alterar título do item da sidebar em src/components/dashboard/layout/config.ts",
+          "done": true
+        },
+        {
+          "id": "021.2",
+          "text": "Manter identificadores técnicos (MenteeList, listMentees, rota /mentoring/mentees) intactos para não quebrar contratos do backend",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "022",
+      "title": "Atribuições de Mentoria › Filtros e operações em massa",
+      "priority": "alta",
+      "status": "revisao",
+      "description": "A página /admin/mentoria/atribuicoes só permitia atribuir um aluno por vez e listava todos os vínculos sem filtros, dificultando a gestão quando há muitos alunos. Em situações como troca de mentor no meio do ano, era inviável transferir vários alunos de um mentor para outro sem repetir o fluxo dezenas de vezes.",
+      "subtasks": [
+        {
+          "id": "022.1",
+          "text": "Filtros na tabela: busca por nome/e-mail, filtro por mentor e filtro por status (Ativos / Encerrados / Todos)",
+          "done": true
+        },
+        {
+          "id": "022.2",
+          "text": "Atribuição em massa: campo multi-select de alunos com chips + seleção do mentor → atribui N alunos em uma única ação, encerrando vínculos anteriores automaticamente",
+          "done": true
+        },
+        {
+          "id": "022.3",
+          "text": "Seleção múltipla na tabela (checkboxes) com toolbar que aparece ao selecionar e permite transferir todos os selecionados para outro mentor",
+          "done": true
+        },
+        {
+          "id": "022.4",
+          "text": "Novo endpoint backend POST /mentoring/assignments/bulk em transação: valida mentor e alunos, encerra vínculos ativos e cria novos atomicamente",
+          "done": true
+        },
+        {
+          "id": "022.5",
+          "text": "Mensagens de feedback (Alert success/error) substituindo confirm() simples, com contagem de vínculos encerrados e criados",
           "done": true
         }
       ]
