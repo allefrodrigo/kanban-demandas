@@ -1,6 +1,6 @@
 {
   "project": "Kanban",
-  "lastUpdated": "2026-05-12T18:00",
+  "lastUpdated": "2026-05-12T18:15",
   "whatsapp": "5584997069841",
   "columns": [
     "backlog",
@@ -507,7 +507,7 @@
       "id": "019",
       "title": "Excluir Aluno › Corrigir erro 500 e cobrir todas as FKs",
       "priority": "alta",
-      "status": "revisao",
+      "status": "resolvido",
       "description": "Ao tentar excluir um cadastro de aluno duplicado, a plataforma retornava erro 500 e o usuário permanecia no banco. Causa raiz: o controller deleteUserById tentava remover registros das tabelas UserQuestionResponses e UserProvaAttempts filtrando por uma coluna userId que essas tabelas não possuem (são ligadas via UserSimulado). Além disso, outras tabelas com FK para Users (OfficialExamScores, UserInstitutions, MentorStudents, StudyGoals.createdBy/assignedBy, question_reports.reviewedBy, ScheduleEvents.createdBy/updatedBy, pomodoro_sessions.UserId) não eram tratadas, podendo bloquear futuras exclusões.",
       "subtasks": [
         {
@@ -546,7 +546,7 @@
       "id": "020",
       "title": "Excluir Aluno › Diálogo elaborado de confirmação",
       "priority": "media",
-      "status": "revisao",
+      "status": "resolvido",
       "description": "O diálogo atual de exclusão de aluno era genérico (apenas 'Tem certeza?'), sem identificar o aluno alvo nem alertar sobre o impacto. Por se tratar de ação destrutiva e irreversível, o admin precisa enxergar exatamente quem está sendo apagado e confirmar deliberadamente.",
       "subtasks": [
         {
@@ -575,7 +575,7 @@
       "id": "021",
       "title": "Sidebar › Mentoria — renomear 'Meus Mentees' para 'Meus Alunos'",
       "priority": "baixa",
-      "status": "revisao",
+      "status": "resolvido",
       "description": "O item da sidebar dentro do grupo Mentoria usava o termo 'Meus Mentees', estrangeirismo pouco familiar para o público. Trocar por 'Meus Alunos' alinha com o vocabulário usado no resto da plataforma.",
       "subtasks": [
         {
@@ -594,7 +594,7 @@
       "id": "022",
       "title": "Atribuições de Mentoria › Filtros e operações em massa",
       "priority": "alta",
-      "status": "revisao",
+      "status": "resolvido",
       "description": "A página /admin/mentoria/atribuicoes só permitia atribuir um aluno por vez e listava todos os vínculos sem filtros, dificultando a gestão quando há muitos alunos. Em situações como troca de mentor no meio do ano, era inviável transferir vários alunos de um mentor para outro sem repetir o fluxo dezenas de vezes.",
       "subtasks": [
         {
