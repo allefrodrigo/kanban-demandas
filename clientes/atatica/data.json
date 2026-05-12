@@ -1,6 +1,6 @@
 {
   "project": "Kanban",
-  "lastUpdated": "2026-05-12T18:15",
+  "lastUpdated": "2026-05-12T19:00",
   "whatsapp": "5584997069841",
   "columns": [
     "backlog",
@@ -620,6 +620,45 @@
         {
           "id": "022.5",
           "text": "Mensagens de feedback (Alert success/error) substituindo confirm() simples, com contagem de vínculos encerrados e criados",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "023",
+      "title": "Atribuir Meta (Professor) › Vincular a conteúdos cadastrados",
+      "priority": "alta",
+      "status": "resolvido",
+      "description": "Com a migração dos mentores de admin para professor, o diálogo 'Atribuir meta ao aluno' (teacher/students/:id?tab=studies) ficou só com campos descritivos (título, descrição, datas, prioridade) e enviava targets vazios. Sem vincular matérias e assuntos da plataforma, a meta não rastreia progresso real e o professor não consegue cobrar o aluno objetivamente. O acesso já existia no fluxo do admin (student/admin/study-subjects); faltava expor essa estrutura no fluxo do professor.",
+      "subtasks": [
+        {
+          "id": "023.1",
+          "text": "Carregar matérias cadastradas via GET /study-subjects ao abrir o diálogo (rota já aceitava qualquer usuário autenticado, então professor entra sem ajuste de permissão)",
+          "done": true
+        },
+        {
+          "id": "023.2",
+          "text": "Permitir adicionar múltiplos objetivos por meta: cada objetivo com matéria obrigatória, assunto opcional ('Todos os assuntos da matéria') e tempo em minutos",
+          "done": true
+        },
+        {
+          "id": "023.3",
+          "text": "Carregamento lazy dos assuntos: tópicos só são buscados quando a matéria é selecionada e ficam em cache no estado do diálogo",
+          "done": true
+        },
+        {
+          "id": "023.4",
+          "text": "Validação antes do envio: matéria obrigatória e minutos > 0 em cada objetivo, com mensagem indicando qual objetivo precisa de correção",
+          "done": true
+        },
+        {
+          "id": "023.5",
+          "text": "Mensagem amigável se a plataforma estiver sem matérias cadastradas (orientando o professor a pedir cadastro ao admin)",
+          "done": true
+        },
+        {
+          "id": "023.6",
+          "text": "Validado fluxo completo via API local: POST /study-goals/assign/:userId com targets criou meta com totalMinutesRequired somado e StudyGoalTargets persistidos com referências de subject/topic",
           "done": true
         }
       ]
