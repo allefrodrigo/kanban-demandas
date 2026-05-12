@@ -1,6 +1,6 @@
 {
   "project": "Kanban",
-  "lastUpdated": "2026-05-12T19:00",
+  "lastUpdated": "2026-05-12T19:20",
   "whatsapp": "5584997069841",
   "columns": [
     "backlog",
@@ -659,6 +659,40 @@
         {
           "id": "023.6",
           "text": "Validado fluxo completo via API local: POST /study-goals/assign/:userId com targets criou meta com totalMinutesRequired somado e StudyGoalTargets persistidos com referências de subject/topic",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "024",
+      "title": "Acesso do Professor › Ocultar alunos inativos",
+      "priority": "alta",
+      "status": "resolvido",
+      "description": "No acesso do professor (/teacher/students), alunos inativos do ano anterior continuavam aparecendo na lista. Exemplo: Alan Pessoa foi transferido para o Plano Grátis e marcado como inativo, mas seguia visível para o mentor. Como agora os mentores usam o papel 'professor' (não mais admin), o professor deve enxergar apenas alunos ativos da instituição.",
+      "subtasks": [
+        {
+          "id": "024.1",
+          "text": "Backend: endpoint /institutions/:id/users aceita ?status=ativo|inativo|all como filtro opcional",
+          "done": true
+        },
+        {
+          "id": "024.2",
+          "text": "Defesa em profundidade: quando o requisitante é professor, o backend força status='ativo' independente do que a query pedir (mesmo status=all)",
+          "done": true
+        },
+        {
+          "id": "024.3",
+          "text": "Frontend: páginas /teacher/students e /teacher (dashboard) passam status='ativo' explicitamente ao buscar alunos da instituição",
+          "done": true
+        },
+        {
+          "id": "024.4",
+          "text": "Admin mantém acesso completo (sem filtro de status por padrão) e pode opcionalmente passar status='ativo' quando quiser ocultar inativos",
+          "done": true
+        },
+        {
+          "id": "024.5",
+          "text": "Validado localmente: Alan (id 8, status=inativo) some para teacher e continua visível para admin",
           "done": true
         }
       ]
